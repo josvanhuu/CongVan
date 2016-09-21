@@ -9,7 +9,6 @@
 
 <script type="text/javascript">
     var members = @Html.Raw(ViewBag.Members);
-    console.log(members);
 </script>
 <div class="main-content">
     <div class="main-content-inner">
@@ -39,13 +38,7 @@
 
         <div class="page-content">
             <div class="page-header">
-                <h1>
-                    Quản Lý Nhân Sự
-                    @*<small>
-                            <i class="ace-icon fa fa-angle-double-right"></i>
-                            Static &amp; Dynamic Tables
-                        </small>*@
-                </h1>
+                <h1> Quản Lý Nhân Sự </h1>
             </div><!-- /.page-header -->
             <!-- PAGE CONTENT BEGINS -->
             <div class="row">
@@ -1762,17 +1755,18 @@
             </div>
             <!-- PAGE CONTENT ENDS -->
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">Nhân Sự</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form class="form-horizontal" role="form" action="/Admin/Members/Action" method="post">
+            <form class="form-horizontal" role="form" action="/Admin/Members/Action" method="post">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Nhân Sự</h4>
+                            </div>
+                            <div class="modal-body">
+
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Mã nhân viên </label>
 
@@ -1872,16 +1866,16 @@
                                 </div>
 
                                 <div class="space-4"></div>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary" name="command" value="createmember">Save changes</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
         </div><!-- /.page-content -->
     </div>
 </div><!-- /.main-content -->

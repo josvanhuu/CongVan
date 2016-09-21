@@ -22,10 +22,9 @@ namespace CongVan
             bundles.Add(new ScriptBundle("~/header/js").Include(
                       "~/assets/js/ace-extra.min.js"
                       ));
-
+                        
             bundles.Add(new ScriptBundle("~/footer/js").Include(
-                      "~/assets/js/bootstrap.min.js",
-                      "~/assets/js/jquery-2.1.4.min.js",
+                      "~/scripts/jquery-3.1.0.js",
                       "~/assets/js/ace-elements.min.js",
                       "~/assets/js/ace.min.js"
                       ));
@@ -46,14 +45,6 @@ namespace CongVan
                  "~/assets/css/ace-skins.min.css",
                  "~/assets/css/ace-rtl.min.css"
                  ));
-
-            bundles.Add(new ScriptBundle("~/departments/js").Include(
-                      "~/Scripts/ViewModels/Departments.js"
-                      ));
-
-            bundles.Add(new ScriptBundle("~/members/js").Include(
-                      "~/Scripts/ViewModels/Members.js"
-                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/require").Include(
                         "~/Scripts/require.js"));

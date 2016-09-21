@@ -1,5 +1,5 @@
 ﻿/// <reference path="../typings/requirejs/require.d.ts" />
-/// <reference path="../viewmodels/global-declare.ts" />
+/// <reference path="../typings/global-declare/global-declare.d.ts" />
 
 declare var window: Window;
 require.config({
@@ -12,19 +12,19 @@ require.config({
         jqueryPager: "jquery.pager",
         bootstrap: "bootstrap.min",
         respond: "respond.min",
-        //knockout: "knockout-3.4.0",
-        //knockoutMap: "knockout.mapping-latest",
-        amplify: "amplify.min",
+        knockout: "knockout-3.4.0",
+        knockoutMap: "knockout.mapping-latest",
+        //amplify: "amplify.min",
         lodash: "lodash.min",
         toastr: "toastr.min",
-        text: "text",
-        "blueimp-md5": "plugins/blueimp-md5/md5.min",
-        adminApp: "../assets/global/scripts/app.min",
-        adminLayout: "../assets/layouts/layout2/scripts/layout.min",
-        globalizeCore: "globalize.0.1.3/globalize",
+        //text: "text",
+        //"blueimp-md5": "plugins/blueimp-md5/md5.min",
+        //adminApp: "../assets/global/scripts/app.min",
+        //adminLayout: "../assets/layouts/layout2/scripts/layout.min",
+        //globalizeCore: "globalize.0.1.3/globalize",
 
-        globalize: "globalize.0.1.3/cultures/globalize.culture." + window.currentCulture,
-        resourceCommon: "resources/common" + (window.currentCulture == "en-US" ? "" : "." + window.currentCulture)
+        //globalize: "globalize.0.1.3/cultures/globalize.culture." + window.currentCulture,
+        //resourceCommon: "resources/common" + (window.currentCulture == "en-US" ? "" : "." + window.currentCulture)
     },
     shim: {
         bootstrap: ["jquery"],

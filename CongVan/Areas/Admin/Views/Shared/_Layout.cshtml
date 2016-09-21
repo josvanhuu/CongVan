@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     @Styles.Render("~/main/css")
-
     @Scripts.Render("~/header/js")
 
     <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
@@ -192,11 +191,14 @@
     </div><!-- /.main-container -->
     <!-- basic scripts -->
     <!--[if !IE]> -->
-    @Scripts.Render("~/footer/js")
-    @RenderSection("scripts", required: false)
 
     @Scripts.Render("~/bundles/require")
     <script src="~/Scripts/config/require-config.js"></script>
+
+    @Scripts.Render("~/footer/js")
+
+    @RenderSection("scripts", required: false)
+
 
     <!-- <![endif]-->
     <!--[if IE]>
