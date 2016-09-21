@@ -1,0 +1,778 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assman</name>
+    </assembly>
+    <members>
+        <member name="T:Assman.BuildSupport.ILogger">
+            <summary>
+            Represents an interface for a build logger.
+            </summary>
+        </member>
+        <member name="M:Assman.BuildSupport.ILogger.LogMessage(System.String)">
+            <summary>
+            Logs a message to the logger.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Assman.BuildSupport.MSBuild.PreCompileResources">
+            <summary>
+            Consolidates javascript and css resources into fewer files according to the
+            resource management configuration in the web.config.
+            </summary>
+        </member>
+        <member name="M:Assman.BuildSupport.MSBuild.PreCompileResources.Execute">
+            <summary>
+            Executes the task.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.BuildSupport.MSBuild.PreCompileResources.WebRoot">
+            <summary>
+            Gets or sets the physical path the the root of the website.
+            </summary>
+        </member>
+        <member name="P:Assman.BuildSupport.MSBuild.PreCompileResources.Mode">
+            <summary>
+            Indicates whether to consolidate the scripts in Debug or Release mode.
+            </summary>
+        </member>
+        <member name="P:Assman.BuildSupport.MSBuild.PreCompileResources.Version">
+            <summary>
+            Optionally applies the given version to be used in all script/style includes.  If left null,
+            the version will be generated based on the Date/Time the scripts and styles were consolidated.
+            </summary>
+        </member>
+        <member name="P:Assman.BuildSupport.MSBuild.PreCompileResources.DebugTask">
+            <summary>
+            Forces the task to try to launch a debugger when executed.  Default is <c>false</c>.
+            </summary>
+        </member>
+        <member name="T:Assman.IResourceFinder">
+            <summary>
+            Represents an object that can find resources.
+            </summary>
+        </member>
+        <member name="M:Assman.IResourceFinder.FindResources(Assman.ResourceType)">
+            <summary>
+            Finds resources of the given file <see cref="T:Assman.ResourceType"/>.
+            </summary>
+        </member>
+        <member name="M:Assman.IResourceFinder.FindResource(System.String)">
+            <summary>
+            Finds the resource with the given virtual path.
+            </summary>
+        </member>
+        <member name="T:Assman.ContentFiltering.IContentFilter">
+            <summary>
+            An interface for filtering the content of a resource.
+            </summary>
+        </member>
+        <member name="M:Assman.ContentFiltering.IContentFilter.FilterContent(System.String,Assman.ContentFiltering.ContentFilterContext)">
+            <summary>
+            Filters the given content.
+            </summary>
+            <param name="content"></param>
+            <param name="context"></param>
+            <returns>The filtered content.</returns>
+        </member>
+        <member name="M:Assman.ContentFiltering.DefaultPipelines.Javascript">
+            <summary>
+            Constructs a new <see cref="T:Assman.ContentFiltering.ContentFilterPipeline"/> that is used by default for javascript files.
+            </summary>
+        </member>
+        <member name="M:Assman.ContentFiltering.DefaultPipelines.Css">
+            <summary>
+            Constructs a new <see cref="T:Assman.ContentFiltering.ContentFilterPipeline"/> that is used by default for css files.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.AssemblyElement">
+            <summary>
+            A <see cref="T:System.Configuration.ConfigurationElement"/> used to specify an Assembly that the resource management library will
+            search for resources in.
+            </summary>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElement.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElement.#ctor(System.String)">
+            <summary>
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElement.GetAssembly">
+            <summary>
+            Gets the assembly that the element is pointing to.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.Configuration.AssemblyElement.Name">
+            <summary>
+            Gets the name of the assembly.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.AssemblyElementCollection">
+            <summary>
+            Represents a collection of <see cref="T:Assman.Configuration.AssemblyElement"/>s.
+            </summary>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElementCollection.Add(System.String)">
+            <summary>
+            Adds an <see cref="T:Assman.Configuration.AssemblyElement"/> with the given name to the collection.
+            </summary>
+            <param name="assemblyName"></param>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElementCollection.Contains(System.String)">
+            <summary>
+            Returns whether the collection contains a <see cref="T:Assman.Configuration.AssemblyElement"/> with the given name.
+            </summary>
+            <param name="assemblyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElementCollection.CreateNewElement">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElementCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.AssemblyElementCollection.GetAssemblies">
+            <summary>
+            Gets the <see cref="T:System.Reflection.Assembly"/>s that the collection is referring to.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Assman.Configuration.ScriptGroupElement">
+            <summary>
+            A <see cref="T:Assman.Configuration.ResourceGroupElement"/> used to configure client scripts.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.ResourceGroupElement">
+            <summary>
+            Represents the base class for configuring a specific type of resource.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceGroupElement.Include">
+            <summary>
+            Gets or sets the resources that are to be included from consolidation.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceGroupElement.Exclude">
+            <summary>
+            Gets or sets the resources that are to be excluded from consolidation.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceGroupElement.Consolidate">
+            <summary>
+            Gets or sets whether consolidation is enabled for this group.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceGroupElement.ConsolidatedUrl">
+            <summary>
+            Gets the url that is used for consolidated resources of this type.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceGroupElement.Minify">
+            <summary>
+            Gets or sets whether the scripts/styles will be minified when they are consolidated in Release mode.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.ScriptGroupElementCollection">
+            <summary>
+            Represents a collection of <see cref="T:Assman.Configuration.ScriptGroupElement"/>.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.ResourceGroupElementCollection">
+            <summary>
+            Represents a collection of <see cref="T:Assman.Configuration.ResourceGroupElement"/>'s.
+            </summary>
+        </member>
+        <member name="M:Assman.Configuration.ResourceGroupElementCollection.Add(Assman.Configuration.ResourceGroupElement)">
+            <summary>
+            Adds the given <see cref="T:Assman.Configuration.ResourceGroupElement"/> to the collection.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Assman.Configuration.ResourceGroupElementCollection.CreateNewElement">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.ResourceGroupElementCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.Configuration.ResourceGroupElementCollection.Item(System.Int32)">
+            <summary>
+            Gets a <see cref="T:Assman.Configuration.ResourceGroupElement"/> by index number.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.Configuration.ResourceConfigurationElement`1.Consolidate">
+            <summary>
+            Gets or sets whether consolidation is enabled for this type of resource.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceConfigurationElement`1.Groups">
+            <summary>
+            Gets the <see cref="T:Assman.Configuration.ResourceGroupElementCollection"/> used to configure resource groups.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceConfigurationElement`1.GlobalDependencies">
+            <summary>
+            Gets the <see cref="T:Assman.Configuration.GlobalDependenciesElementCollection"/> used to configure global dependencies.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.StylesheetGroupElement">
+            <summary>
+            A <see cref="T:Assman.Configuration.ResourceGroupElement"/> used to configure css.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.StylesheetGroupElementCollection">
+            <summary>
+            Represents a collection of <see cref="T:Assman.Configuration.StylesheetGroupElement"/>'s.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.ResourceMatchElement">
+            <summary>
+            Represents a pattern to match against resources.
+            </summary>
+        </member>
+        <member name="M:Assman.Configuration.ResourceMatchElement.IsMatch(System.String)">
+            <summary>
+            Gets whether the given resource path is a match against the pattern.
+            </summary>
+            <param name="resourcePath"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.Configuration.ResourceMatchElement.Regex">
+            <summary>
+            Gets or sets the regex pattern used to match.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.ResourceMatchElement.Path">
+            <summary>
+            Gets or sets the regex pattern used to match.
+            </summary>
+        </member>
+        <member name="T:Assman.Configuration.ResourceMatchElementCollection">
+            <summary>
+            Represents a collection of patterns to match against resources.
+            </summary>
+        </member>
+        <member name="M:Assman.Configuration.ResourceMatchElementCollection.AddPattern(System.String)">
+            <summary>
+            Adds the given regex pattern to the collection.
+            </summary>
+            <param name="pattern">A regular expression pattern.</param>
+        </member>
+        <member name="M:Assman.Configuration.ResourceMatchElementCollection.IsMatch(System.String)">
+            <summary>
+            Gets whether the given resourcePath is matched by any of the
+            patterns in the collection.
+            </summary>
+            <param name="resourcePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.ResourceMatchElementCollection.GetMatchIndex(System.String)">
+            <summary>
+            Gets the zero-based index of the pattern that matches the given resourcePath.  If no match is found,
+            -1 is returned.
+            </summary>
+            <param name="resourcePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.ResourceMatchElementCollection.CreateNewElement">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.Configuration.ResourceMatchElementCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Assman.BuildSupport.PreCompileCommand">
+            <summary>
+            Consolidates javascript and css resources into fewer files according to the
+            resource management configuration in the web.config.
+            </summary>
+        </member>
+        <member name="M:Assman.BuildSupport.PreCompileCommand.GetInstance(System.String)">
+            <summary>
+            Gets an instance of a <see cref="T:Assman.BuildSupport.PreCompileCommand"/>.
+            </summary>
+            <param name="webRoot">The full physical path to the the root of the website.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.BuildSupport.PreCompileCommand.Execute">
+            <summary>
+            Executes the task.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.BuildSupport.PreCompileCommand.WebsiteRootDirectory">
+            <summary>
+            Gets the physical path the the root of the website.
+            </summary>
+        </member>
+        <member name="P:Assman.BuildSupport.PreCompileCommand.Mode">
+            <summary>
+            Indicates whether to consolidate the scripts in Debug or Release mode.
+            </summary>
+        </member>
+        <member name="P:Assman.BuildSupport.PreCompileCommand.Version">
+            <summary>
+            Optionally applies the given version to be used in all script/style includes.  If left null,
+            the version will be generated based on the Date/Time the scripts and styles were consolidated.
+            </summary>
+        </member>
+        <member name="P:Assman.BuildSupport.PreCompileCommand.Logger">
+            <summary>
+            Gets or sets the build logger used to log the progress of the command.
+            </summary>
+        </member>
+        <member name="T:Assman.ConsolidatedResource">
+            <summary>
+            Represents a collection of resources that have been consolidated
+            into one resource.
+            </summary>
+        </member>
+        <member name="M:Assman.ConsolidatedResource.Equals(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="obj"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Assman.ConsolidatedResource.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.ConsolidatedResource.LastModified">
+            <summary>
+            Gets the most recent last modified date of the resources the consolidated resources.
+            </summary>
+        </member>
+        <member name="P:Assman.ConsolidatedResource.Resources">
+            <summary>
+            Gets the resources that were consolidated.
+            </summary>
+        </member>
+        <member name="T:Assman.ContentFiltering.JSMinFilter">
+            <summary>
+             Defines a content filter for javascript that uses the JSMin library to minify it.
+            </summary>
+        </member>
+        <member name="M:Assman.ContentFiltering.JSMinFilter.FilterContent(System.String,Assman.ContentFiltering.ContentFilterContext)">
+            <summary>
+            Minifies javascript content using the JSMin library.
+            </summary>
+            <param name="content"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Assman.IResourceGroup.Contains(Assman.IResource)">
+            <summary>
+            Indicates whether the given resource exists in the resource group.
+            </summary>
+        </member>
+        <member name="M:Assman.IResourceGroup.GetResources">
+            <summary>
+            Gets the resources that belong to the group.
+            </summary>
+        </member>
+        <member name="P:Assman.IResourceGroup.ConsolidatedUrl">
+            <summary>
+            The url of the file that the contents of all resources in the group are consolidated to.
+            </summary>
+        </member>
+        <member name="P:Assman.IResourceGroup.Minify">
+            <summary>
+            Indicates whether to minify the resources contents.
+            </summary>
+        </member>
+        <member name="P:Assman.IResourceGroup.ResourceType">
+            <summary>
+            Gets the <see cref="P:Assman.IResourceGroup.ResourceType"/> of the resources in the group.
+            </summary>
+        </member>
+        <member name="T:Assman.Registration.ConsolidatingResourceRegistry">
+            <summary>
+            Represents a <see cref="T:Assman.Registration.IResourceRegistry"/> that consolidates script or css includes that
+            are registered through it.
+            </summary>
+            <remarks>
+            This is a proxy for an inner <see cref="T:Assman.Registration.IResourceRegistry"/> which means it can wrap any implementation of a
+            <see cref="T:Assman.Registration.IResourceRegistry"/>.
+            </remarks>
+        </member>
+        <member name="T:Assman.Registration.IResourceRegistry">
+            <summary>
+            Represents an object that manages the inclusion of resources.
+            </summary>
+        </member>
+        <member name="M:Assman.Registration.IResourceRegistry.Require(System.String)">
+            <summary>
+            Registers the fact that the given resource is required on the current page.
+            </summary>
+            <param name="resourcePath">The virtual path of the resource to be included.</param>
+        </member>
+        <member name="M:Assman.Registration.IResourceRegistry.RegisterInlineBlock(System.Action{System.IO.TextWriter},System.Object)">
+            <summary>
+            Registers an inline block that will appear inline on the page directly below the includes of this <see cref="T:Assman.Registration.IResourceRegistry"/>.
+            </summary>
+            <param name="block">The delegate that will write some inline css or javascript that will appear on the page.</param>
+            <param name="key">A unique key used to identify the inline block.  This is optional and can be set to <c>null</c>.</param>
+        </member>
+        <member name="M:Assman.Registration.IResourceRegistry.IsInlineBlockRegistered(System.Object)">
+            <summary>
+            Indicates that an inline block with the given key has been registered.
+            </summary>
+        </member>
+        <member name="T:Assman.Registration.NullResourceRegistry">
+            <summary>
+            An implementation of <see cref="T:Assman.Registration.IResourceRegistry"/> that doesn't do anything. (null object pattern)
+            </summary>
+        </member>
+        <member name="M:Assman.Registration.ResourceRegistryExtensions.RegisterInlineBlock(Assman.Registration.IResourceRegistry,System.String,System.Object)">
+            <summary>
+            Registers an inline block that will appear inline on the page directly below the includes of this <see cref="T:Assman.Registration.IResourceRegistry"/>.
+            </summary>
+            <param name="registry"></param>
+            <param name="block">The inline css or javascript that will appear on the page.</param>
+            <param name="key">A unique key used to identify the inline block.  This is optional and can be set to <c>null</c>.</param>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.AddRange(System.Collections.Generic.IList{Assman.IResource},System.Collections.Generic.IEnumerable{Assman.IResource})">
+            <summary>
+            Adds a collection of resources to this collection.
+            </summary>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.LastModified(System.Collections.Generic.IEnumerable{Assman.IResource})">
+            <summary>
+            Returns the most recent last modified date of the contained resources.
+            </summary>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.ConsolidateContentTo(System.Collections.Generic.IEnumerable{Assman.IResource},System.IO.TextWriter)">
+            <summary>
+            Writes the contents of all of the contained resources to the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.ConsolidateContentTo(System.Collections.Generic.IEnumerable{Assman.IResource},System.IO.TextWriter,System.String)">
+            <summary>
+            Writes the contents of all of the contained resources to the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="writer"></param>
+            <param name="separator">A string that will be between each resource.</param>
+            <param name="resources"></param>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.ConsolidateContentTo(System.Collections.Generic.IEnumerable{Assman.IResource},System.IO.TextWriter,System.Func{Assman.IResource,System.String})">
+            <summary>
+            Writes the contents of all of the contained resources to the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="resources"></param>
+            <param name="writer"></param>
+            <param name="getResourceContent"></param>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.ConsolidateContentTo(System.Collections.Generic.IEnumerable{Assman.IResource},System.IO.TextWriter,System.Func{Assman.IResource,System.String},System.String)">
+            <summary>
+            Writes the contents of all of the contained resources to the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="resources"></param>
+            <param name="writer"></param>
+            <param name="getResourceContent"></param>
+            <param name="separator">A string that will be between each resource.</param>
+        </member>
+        <member name="M:Assman.ResourceCollectionExtensions.Consolidate(System.Collections.Generic.IEnumerable{Assman.IResource},Assman.IResourceGroup,System.Func{Assman.IResource,System.String},System.String)">
+            <summary>
+            Consolidated all of the resources in the collection into a <see cref="T:Assman.ConsolidatedResource"/>.
+            </summary>
+            <param name="resources"></param>
+            <param name="group"></param>
+            <param name="getResourceContent"></param>
+            <param name="separator"></param>
+        </member>
+        <member name="T:Assman.IResource">
+            <summary>
+            Represents a resource used on the web.
+            </summary>
+        </member>
+        <member name="M:Assman.IResource.GetContent">
+            <summary>
+            Gets the content of the resource.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.IResource.Name">
+            <summary>
+            Gets the name of the resource.
+            </summary>
+        </member>
+        <member name="P:Assman.IResource.VirtualPath">
+            <summary>
+            Gets the Virtual Path of the resource.
+            </summary>
+        </member>
+        <member name="P:Assman.IResource.LastModified">
+            <summary>
+            Gets the date that the resource was last modified.
+            </summary>
+        </member>
+        <member name="P:Assman.IResource.FileExtension">
+            <summary>
+            Gets the file extension of the resource.  This is used when figuring out which <see cref="T:Assman.ContentFiltering.IContentFilter"/> to create for the resource.
+            </summary>
+        </member>
+        <member name="T:Assman.ThreadSafeInMemoryCache`2">
+            <summary>
+            This class is intended to be used when you are accumulating a cache of stuff that can be accessed by multiple threads.
+            It wraps a Dictionary, but is thread safe.  I didn't make it implement IDictionary because IDictionary's interface
+            is pretty broad and that would be more work (YAGNI).
+            </summary>
+            <remarks>
+            When we move to .NET 4, we can replace this with a ConcurrentDictionary.
+            </remarks>
+        </member>
+        <member name="T:Assman.EmbeddedResource">
+            <summary>
+            Represents a resource embedded in an assembly.
+            </summary>
+        </member>
+        <member name="M:Assman.EmbeddedResource.GetVirtualPath(System.String,System.String)">
+            <summary>
+            Creates the virtual path for an EmbeddedResource used for pattern matching in the resource management config file.
+            </summary>
+            <param name="assemblyName"></param>
+            <param name="resourceName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.EmbeddedResource.#ctor(System.Reflection.Assembly,System.String)">
+            <summary>
+            Creates a new instance of an <see cref="T:Assman.EmbeddedResource"/>.
+            </summary>
+            <param name="assembly">The assembly the resource is embedded in.</param>
+            <param name="resourceName">The full name of the resource (e.g. MyNamespace.MyResource.txt)</param>
+        </member>
+        <member name="M:Assman.EmbeddedResource.GetContent">
+            <summary>
+            Gets the content of the resource.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.EmbeddedResource.ToString">
+            <summary>
+            Returns a string representation of the <see cref="T:Assman.FileResource"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.EmbeddedResource.Name">
+            <summary>
+            Gets the name of the resource.
+            </summary>
+        </member>
+        <member name="P:Assman.EmbeddedResource.VirtualPath">
+            <summary>
+            Gets the Virtual Path of the resource.
+            </summary>
+        </member>
+        <member name="P:Assman.EmbeddedResource.LastModified">
+            <summary>
+            Gets the date that the resource was last modified.
+            </summary>
+        </member>
+        <member name="M:Assman.FileResourceFinder.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Assman.FileResourceFinder"/>.
+            </summary>
+            <param name="directory">The directory to recursively find resources.</param>
+        </member>
+        <member name="M:Assman.FileResourceFinder.FindResources(Assman.ResourceType)">
+            <summary>
+            Recursively finds resources in the given directory with the given extension.
+            </summary>
+            <param name="resourceType">The resource type to be found.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Assman.Configuration.AssmanConfiguration">
+            <summary>
+            Represents the configuration section for resource management.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.Current">
+            <summary>
+            Gets the current configuration.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.ConfigLoader">
+            <summary>
+            Gets or sets the <see cref="T:Assman.Configuration.IConfigLoader"/> that is used by the resource consolidation framework
+            to load config settings.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.RootFilePath">
+            <summary>
+            Gets the full filesytem path to the root of the website.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.Consolidate">
+            <summary>
+            Gets or sets whether consolidation should be enabled.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.GZip">
+            <summary>
+            Gets or sets whether consolidation should be enabled.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.ManageDependencies">
+            <summary>
+            Gets or sets whether dependencies provided by the <see cref="T:Assman.DependencyManagement.IDependencyProvider"/>'s will be included automatically.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.MutuallyExclusiveGroups">
+            <summary>
+            Gets or sets whether the same file is allowed to be part of multiple groups or not.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.Version">
+            <summary>
+            Gets or sets the version number that will be appended to the end of all resource url's.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.Scripts">
+            <summary>
+            Gets the <see cref="T:Assman.Configuration.ScriptGroupElement"/> used to configure client script resources.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.Stylesheets">
+            <summary>
+            Gets the <see cref="T:Assman.Configuration.StylesheetGroupElement"/> used to configure css resources.
+            </summary>
+        </member>
+        <member name="P:Assman.Configuration.AssmanConfiguration.Assemblies">
+            <summary>
+            Gets the assemblies that the library will search through for embedded resources.
+            </summary>
+        </member>
+        <member name="T:Assman.FileResource">
+            <summary>
+            Represents a file <see cref="T:Assman.IResource"/>.
+            </summary>
+        </member>
+        <member name="M:Assman.FileResource.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of a <see cref="T:Assman.FileResource"/>.
+            </summary>
+            <param name="filePath">The physical path to the file.</param>
+            <param name="basePath">The physical path to the directory where the virtual path starts from.</param>
+        </member>
+        <member name="M:Assman.FileResource.GetContent">
+            <summary>
+            Gets the content of the file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.FileResource.ToString">
+            <summary>
+            Returns the virtual path of the file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.FileResource.Name">
+            <summary>
+            Gets the file name.
+            </summary>
+        </member>
+        <member name="P:Assman.FileResource.VirtualPath">
+            <summary>
+            Gets the virtual path constructed based on the base path.
+            </summary>
+        </member>
+        <member name="P:Assman.FileResource.LastModified">
+            <summary>
+            Gets the time this file was last modified.
+            </summary>
+        </member>
+        <member name="T:Assman.ResourceCollection">
+            <summary>
+            Represents a collection of <see cref="T:Assman.IResource"/>s.
+            </summary>
+        </member>
+        <member name="M:Assman.ResourceCollection.Equals(System.Object)">
+            <summary>
+            Returns whether the given object is equal to this object.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.ResourceCollection.Equals(Assman.ResourceCollection)">
+            <summary>
+            Returns whether the given <see cref="T:Assman.ResourceCollection"/> contains the same (or equivilent) resources
+            as this instance.
+            </summary>
+            <param name="resourceCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.ResourceCollection.GetHashCode">
+            <summary>
+            Returns a hashcode generated from the contained resources.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Assman.ResourceFinderFactory">
+            <summary>
+            Constructs <see cref="T:Assman.IResourceFinder"/>s.
+            </summary>
+        </member>
+        <member name="M:Assman.ResourceFinderFactory.GetInstance(System.String)">
+            <summary>
+            Creates a <see cref="T:Assman.IResourceFinder"/> that will find resources in the given file system directory (and sub-directories).
+            </summary>
+            <param name="directory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Assman.ResourceFinderFactory.GetInstance(System.Reflection.Assembly)">
+            <summary>
+            Creates a <see cref="T:Assman.IResourceFinder"/> that will find embedded resources in the given assembly.
+            </summary>
+            <param name="assembly"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Assman.ResourceFinderFactory.Null">
+            <summary>
+            Returns a no-op <see cref="T:Assman.IResourceFinder"/>. (null object pattern)
+            </summary>
+        </member>
+        <member name="T:Assman.ResourceType">
+            <summary>
+            Represents a specific type of web resource that can be consolidated and included on a web page.
+            </summary>
+        </member>
+        <member name="P:Assman.ResourceType.Script">
+            <summary>
+            Gets the client script resource type (e.g. javascript).
+            </summary>
+        </member>
+        <member name="P:Assman.ResourceType.Stylesheet">
+            <summary>
+            Gets the stylesheet resource type (e.g. css).
+            </summary>
+        </member>
+    </members>
+</doc>
