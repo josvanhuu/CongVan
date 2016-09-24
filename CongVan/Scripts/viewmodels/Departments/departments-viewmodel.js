@@ -13,6 +13,7 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
                 _this.isShowAddOrEdit(false);
             };
         }
+        //addEditSalonPartial: KnockoutObservable<AddEditSalonViewModel> = ko.observable(null);
         //constructor() {
         //    this.model = new SalonModel();
         //    this.common = new Common();
@@ -21,22 +22,22 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
         //        this.listSalons(listSalons.result);
         //    });
         //}
-        //private requirePartial(callback: Function) {
-        //    if (!this.addEditSalonPartial()) {
-        //        this.common.blockUI({ target: "#list", animate: true });
-        //    }
-        //    require(["text!/Admin/Salon/PartialAddSalon", "validate"], (template: string) => {
-        //        if (!this.addEditSalonPartial()) {
-        //            $("#addOrEdit").append(template);
-        //            this.addEditSalonPartial(new AddEditSalonViewModel());
-        //            ko.applyBindingsToNode($("#addOrEditForm")[0], null, window.viewModel);
-        //            let form = $("#addOrEditForm form");
-        //            $.validator.unobtrusive.parse("#addOrEditForm form");
-        //            this.common.unblockUI("#list");
-        //        }
-        //        callback();
-        //    });
-        //}
+        DepartmentViewModel.prototype.requirePartial = function (callback) {
+            debugger;
+            //if (!this.addEditSalonPartial()) {
+            //    //this.common.blockUI({ target: "#list", animate: true });
+            //}
+            require(["text!/Admin/Salon/PartialAddSalon", "validate"], function (template) {
+                //if (!this.addEditSalonPartial()) {
+                //    $("#addOrEdit").append(template);
+                //    //this.addEditSalonPartial(new AddEditSalonViewModel());
+                ko.applyBindingsToNode($("#addOrEditForm")[0], null, window.viewModel);
+                $.validator.unobtrusive.parse("#addOrEditForm form");
+                //    //this.common.unblockUI("#list");
+                //}
+                callback();
+            });
+        };
         DepartmentViewModel.prototype.formSearch = function () {
             this.search(1);
         };
@@ -53,13 +54,13 @@ define(["require", "exports", "jquery", "knockout"], function (require, exports,
             this.search(pageclickednumber);
         };
         DepartmentViewModel.prototype.showAdd = function () {
-            $("#myModal").show();
-            //this.requirePartial(() => {
-            //    this.addEditSalonPartial().add(() => {
-            //        this.search(1);
-            //    });
-            //    this.isShowAddOrEdit(true);
-            //});
+            var _this = this;
+            this.requirePartial(function () {
+                //this.addEditSalonPartial().add(() => {
+                //    this.search(1);
+                //});
+                _this.isShowAddOrEdit(true);
+            });
         };
         return DepartmentViewModel;
     }());

@@ -3,10 +3,11 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+@section scripts {
 <script type="text/javascript">
     require(["viewmodels/Departments/departments-viewmodel"]);
 </script>
-
+}
 <div class="main-content">
     <div class="main-content-inner">
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
@@ -49,7 +50,7 @@
                     <div class="clearfix">
                         <div class="pull-left">
                             <p>
-                                <button onclick="showAdd()" class="btn btn-white btn-success btn-bold">
+                                <button data-bind="click: showAdd" class="btn btn-white btn-success btn-bold">
                                     <i class="ace-icon fa fa-plus bigger-120 green"></i>
                                     Thêm mới
                                 </button>

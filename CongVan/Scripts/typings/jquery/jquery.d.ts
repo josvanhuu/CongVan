@@ -2780,9 +2780,8 @@ interface JQuery {
 
     /**
      * Retrieve all the elements contained in the jQuery set, as an array.
-     * @name toArray
      */
-    toArray(): HTMLElement[];
+    toArray(): any[];
 
     /**
      * Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
@@ -2838,9 +2837,8 @@ interface JQuery {
     get(index: number): HTMLElement;
     /**
      * Retrieve the elements matched by the jQuery object.
-     * @alias toArray
      */
-    get(): HTMLElement[];
+    get(): any[];
 
     /**
      * Search for a given element from among the matched elements.

@@ -61,10 +61,8 @@ interface KnockoutSubscription {
 }
 
 interface KnockoutSubscribable<T> extends KnockoutSubscribableFunctions<T> {
-    subscribe(callback: (newValue: T) => void, target: any, event: "beforeChange"): KnockoutSubscription;
-	subscribe(callback: (newValue: T) => void, target?: any, event?: "change"): KnockoutSubscription;
+	subscribe(callback: (newValue: T) => void, target?: any, event?: string): KnockoutSubscription;
 	subscribe<TEvent>(callback: (newValue: TEvent) => void, target: any, event: string): KnockoutSubscription;
-
 	extend(requestedExtenders: { [key: string]: any; }): KnockoutSubscribable<T>;
 	getSubscriptionsCount(): number;
 }
@@ -93,11 +91,6 @@ interface KnockoutObservableArrayStatic {
 }
 
 interface KnockoutObservableArray<T> extends KnockoutObservable<T[]>, KnockoutObservableArrayFunctions<T> {
-    subscribe(callback: (newValue: KnockoutArrayChange<T>[]) => void, target: any, event: "arrayChange"): KnockoutSubscription;
-    subscribe(callback: (newValue: T[]) => void, target: any, event: "beforeChange"): KnockoutSubscription;
-    subscribe(callback: (newValue: T[]) => void, target?: any, event?: "change"): KnockoutSubscription;
-    subscribe<TEvent>(callback: (newValue: TEvent) => void, target: any, event: string): KnockoutSubscription;
-
     extend(requestedExtenders: { [key: string]: any; }): KnockoutObservableArray<T>;
 }
 
@@ -332,7 +325,7 @@ interface KnockoutUtils {
 }
 
 interface KnockoutArrayChange<T> {
-    status: "added" | "deleted";
+    status: string;
     value: T;
     index: number;
     moved?: number;

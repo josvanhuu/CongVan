@@ -1,4 +1,5 @@
-﻿interface IListWithTotalRecord<T> {
+﻿/// <reference path="../resources/resources.d.ts" />
+interface IListWithTotalRecord<T> {
     result: T[];
     totalRecord: number;
 }
@@ -6,7 +7,7 @@
 interface Window {
     //currentCulture: string;
     //currentCultureShort: string;
-    //resources: ResourcesModule.Resources;
+    resources: ResourcesModule.Resources;
     //token: string;
     returnUrl: string;
     pageSize: number;

@@ -12,6 +12,8 @@ class DepartmentViewModel {
     isSearching: KnockoutObservable<boolean> = ko.observable(false);
     isShowAddOrEdit: KnockoutObservable<boolean> = ko.observable(false);
 
+    //addEditSalonPartial: KnockoutObservable<AddEditSalonViewModel> = ko.observable(null);
+
     //constructor() {
     //    this.model = new SalonModel();
     //    this.common = new Common();
@@ -22,26 +24,26 @@ class DepartmentViewModel {
     //    });
     //}
 
-    //private requirePartial(callback: Function) {
-    //    if (!this.addEditSalonPartial()) {
-    //        this.common.blockUI({ target: "#list", animate: true });
-    //    }
+    private requirePartial(callback: Function) {
+        debugger;
+        //if (!this.addEditSalonPartial()) {
+        //    //this.common.blockUI({ target: "#list", animate: true });
+        //}
 
-    //    require(["text!/Admin/Salon/PartialAddSalon", "validate"], (template: string) => {
-    //        if (!this.addEditSalonPartial()) {
-    //            $("#addOrEdit").append(template);
-    //            this.addEditSalonPartial(new AddEditSalonViewModel());
-    //            ko.applyBindingsToNode($("#addOrEditForm")[0], null, window.viewModel);
+        require(["text!/Admin/Salon/PartialAddSalon", "validate"], (template: string) => {
+            //if (!this.addEditSalonPartial()) {
+            //    $("#addOrEdit").append(template);
+            //    //this.addEditSalonPartial(new AddEditSalonViewModel());
+                ko.applyBindingsToNode($("#addOrEditForm")[0], null, window.viewModel);
 
-    //            let form = $("#addOrEditForm form");
-    //            $.validator.unobtrusive.parse("#addOrEditForm form");
+                $.validator.unobtrusive.parse("#addOrEditForm form");
 
-    //            this.common.unblockUI("#list");
-    //        }
+            //    //this.common.unblockUI("#list");
+            //}
 
-    //        callback();
-    //    });
-    //}
+            callback();
+        });
+    }
 
     formSearch() {
         this.search(1);
@@ -60,15 +62,14 @@ class DepartmentViewModel {
     pageClickSearch(pageclickednumber: number) {
         this.search(pageclickednumber);
     }
-
+    
     showAdd() {
-        $("#myModal").show();
-        //this.requirePartial(() => {
-        //    this.addEditSalonPartial().add(() => {
-        //        this.search(1);
-        //    });
-        //    this.isShowAddOrEdit(true);
-        //});
+        this.requirePartial(() => {
+            //this.addEditSalonPartial().add(() => {
+            //    this.search(1);
+            //});
+            this.isShowAddOrEdit(true);
+        });
     }
 
     closeAddOrEdit = () => {
