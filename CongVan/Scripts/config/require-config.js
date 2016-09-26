@@ -33,6 +33,9 @@ require.config({
         //proviewEditor: "plugins/wysiwyg/src/proviewEditor",
         sweetalert: "plugins/sweetalert/sweetalert.min",
         globalize: "globalize.0.1.3/cultures/globalize.culture." + window.currentCulture,
+        //resourceCommon: `resources/common${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
+        //resourceAdmin: `resources/admin/admin${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
+        validate: "common/validate"
     },
     shim: {
         //bootstrap: ["jquery"],
@@ -61,7 +64,7 @@ require.config({
         jqueryPager: ["jquery"],
         jqueryCookie: ["jquery"],
         aceElement: ["jquery"],
-        ace: ["jquery", "aceExtra", "aceElement"],
+        ace: ["jquery", "bootstrap", "aceExtra", "aceElement"],
         //adminLayout: ["jqueryCookie", "adminApp"],
         globalize: ["globalizeCore"]
     }

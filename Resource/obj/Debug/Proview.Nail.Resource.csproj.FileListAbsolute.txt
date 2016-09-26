@@ -1,0 +1,16 @@
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\bin\Debug\Proview.Nail.Resource.dll
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\bin\Debug\Proview.Nail.Resource.pdb
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\bin\Debug\vi-VN\Proview.Nail.Resource.resources.dll
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.AdminResources.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.CommonResources.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.PayrollFormulaResources.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.Resources.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.AdminResources.vi-VN.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.CommonResources.vi-VN.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.PayrollFormulaResources.vi-VN.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.Resources.vi-VN.resources
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.csproj.GenerateResource.Cache
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\vi-VN\Proview.Nail.Resource.resources.dll
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.dll
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.pdb
+C:\Proview\PROVIEW.NAIL\Proview.Nail.Resource\obj\Debug\Proview.Nail.Resource.csprojResolveAssemblyReference.cache

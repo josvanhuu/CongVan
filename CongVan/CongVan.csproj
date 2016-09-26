@@ -66,17 +66,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\KIDAP\Kid.Utils\bin\Debug\Kid.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="Kids, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\KIDAP\Kids\bin\Debug\Kids.dll</HintPath>
-    </Reference>
     <Reference Include="Kids.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\KIDAP\Kids.Entities\bin\Debug\Kids.Entities.dll</HintPath>
-    </Reference>
-    <Reference Include="Kids.MircosoftEntityFrameWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\KIDAP\MircosoftEntityFrameWork\bin\Debug\Kids.MircosoftEntityFrameWork.dll</HintPath>
     </Reference>
     <Reference Include="Kids.Repositories, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -252,6 +244,7 @@
     <Compile Include="Areas\Admin\Controllers\ReportController.cs" />
     <Compile Include="Areas\Admin\Controllers\RolesSettingController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Admin\Models\DepartmentsModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseNavigationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -403,6 +396,7 @@
     <Content Include="Areas\Admin\Views\Report\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_EmptyLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\_PartialAddOrEdit.cshtml" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
@@ -817,6 +811,26 @@
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\plugins\blueimp-md5\md5.js" />
+    <Content Include="Scripts\plugins\blueimp-md5\md5.min.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\async.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\depend.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\font.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\goog.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\image.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\json.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\mdown.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\noext.js" />
+    <Content Include="Scripts\plugins\requirejs-plugins\propertyParser.js" />
+    <Content Include="Scripts\plugins\sweetalert\sweetalert-dev.js" />
+    <Content Include="Scripts\plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Scripts\plugins\wysiwyg\src\emotion.js" />
+    <Content Include="Scripts\plugins\wysiwyg\src\hhEditor.js" />
+    <Content Include="Scripts\plugins\wysiwyg\src\proviewEditor.css" />
+    <Content Include="Scripts\plugins\wysiwyg\src\proviewEditor.js" />
+    <Content Include="Scripts\plugins\wysiwyg\src\wysiwyg-editor.css" />
+    <Content Include="Scripts\plugins\wysiwyg\src\wysiwyg-editor.js" />
+    <Content Include="Scripts\plugins\wysiwyg\src\wysiwyg.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\require.js" />
@@ -870,11 +884,10 @@
     <Content Include="Views\Navigation\TopNavigation.cshtml" />
     <Content Include="Views\Shared\_SubMenu.cshtml" />
     <Content Include="tsconfig.json" />
+    <Content Include="Scripts\plugins\blueimp-md5\md5.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Scripts\Models\" />
     <Folder Include="Scripts\typings\blueimp-md5\" />
     <Folder Include="Scripts\typings\cldr.js\" />
     <Folder Include="Scripts\typings\jstree\" />
@@ -891,6 +904,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\config\require-config.ts" />
+    <TypeScriptCompile Include="Scripts\models\department\deparment-model.ts" />
     <TypeScriptCompile Include="Scripts\typings\amplifyjs\amplifyjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
@@ -926,6 +940,27 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\KIDAP\Kids\Kids.csproj">
+      <Project>{452776d5-23d1-4203-a33b-aa941bd8a48e}</Project>
+      <Name>Kids</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KIDAP\MircosoftEntityFrameWork\Kids.MircosoftEntityFrameWork.csproj">
+      <Project>{3ffe22ad-89e3-4292-b386-b0dab3967ef6}</Project>
+      <Name>Kids.MircosoftEntityFrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KIDAP\SQLServerProvider\MSSQLProvider.csproj">
+      <Project>{8ed9db4c-c9c1-470d-a22f-0f8b95cf0afb}</Project>
+      <Name>MSSQLProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resource\Resource.csproj">
+      <Project>{35b7f3da-9a22-496f-b2d7-95a7fa593e72}</Project>
+      <Name>Resource</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

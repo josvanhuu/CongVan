@@ -3,9 +3,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-@Scripts.Render("~/members/js")
-
-@Scripts.Render("~/datetime/js")
 
 <script type="text/javascript">
     var members = @Html.Raw(ViewBag.Members);

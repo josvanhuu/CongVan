@@ -1,0 +1,14 @@
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\bin\Debug\Resource.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\bin\Debug\Resource.pdb
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\bin\Debug\vi-VN\Resource.resources.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.AdminResources.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.CommonResources.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.Resources.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.AdminResources.vi-VN.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.CommonResources.vi-VN.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.Resources.vi-VN.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.csproj.GenerateResource.Cache
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\vi-VN\Resource.resources.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.pdb
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache

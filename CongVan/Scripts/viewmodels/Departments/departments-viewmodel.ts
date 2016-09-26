@@ -3,6 +3,11 @@ import * as ko from "knockout";
 import * as toastr from "toastr";
 import * as swal from "sweetalert";
 
+
+import { DeparmentModel, IDeparment } from "../../models/department/deparment-model";
+
+declare var listdeparments;
+
 class DepartmentViewModel {
     private totalPage: number = 0;
     private currentPage: number = 1;
@@ -12,37 +17,38 @@ class DepartmentViewModel {
     isSearching: KnockoutObservable<boolean> = ko.observable(false);
     isShowAddOrEdit: KnockoutObservable<boolean> = ko.observable(false);
 
-    //addEditSalonPartial: KnockoutObservable<AddEditSalonViewModel> = ko.observable(null);
+    listDeparments: KnockoutObservableArray<IDeparment> = ko.observableArray([]);
+    //listDeparments: KnockoutObservableArray<any>;
 
-    //constructor() {
-    //    this.model = new SalonModel();
-    //    this.common = new Common();
+    eid: KnockoutObservable<string> = ko.observable("");
+    code: KnockoutObservable<string> = ko.observable("");
+    name: KnockoutObservable<string> = ko.observable("");
+    address: KnockoutObservable<string> = ko.observable("");
+    email: KnockoutObservable<string> = ko.observable("");
+    phone: KnockoutObservable<string> = ko.observable("");
+    description: KnockoutObservable<string> = ko.observable("");
 
-    //    $(() => {
-    //        this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
-    //        this.listSalons(listSalons.result);
-    //    });
-    //}
+    isFocusName: KnockoutObservable<boolean> = ko.observable(false);
+    isSending: KnockoutObservable<boolean> = ko.observable(false);
+    isAdd: KnockoutObservable<boolean> = ko.observable(false);
 
-    private requirePartial(callback: Function) {
-        debugger;
-        //if (!this.addEditSalonPartial()) {
-        //    //this.common.blockUI({ target: "#list", animate: true });
-        //}
+    private model: DeparmentModel;
+    private updateCallback: Function;
 
-        require(["text!/Admin/Salon/PartialAddSalon", "validate"], (template: string) => {
-            //if (!this.addEditSalonPartial()) {
-            //    $("#addOrEdit").append(template);
-            //    //this.addEditSalonPartial(new AddEditSalonViewModel());
-                ko.applyBindingsToNode($("#addOrEditForm")[0], null, window.viewModel);
+    constructor() {
+        this.model = new DeparmentModel();
+        this.listDeparments(listdeparments);
 
-                $.validator.unobtrusive.parse("#addOrEditForm form");
-
-            //    //this.common.unblockUI("#list");
-            //}
-
-            callback();
+        $(() => {
+            //this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
+            //this.search(1);
         });
+
+        //this.model = new DepartmentsModel();
+        //$(() => {
+        //    this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
+        //    this.listSalons(listSalons.result);
+        //});
     }
 
     formSearch() {
@@ -52,66 +58,114 @@ class DepartmentViewModel {
     search(page: number) {
         this.currentPage = page;
         this.isSearching(true);
-        //this.model.search(this.keyword(), page, this.recordPerPage, (data) => {
-        //    this.isSearching(false);
-        //    this.listSalons(data.result);
-        //    this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
-        //});
+        this.model.load((data) => {
+            this.isSearching(false);
+            this.listDeparments(data);
+            //this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
+        });
+    }
+
+    save() {
+        if (!$("#addOrEditForm form").valid()) {
+            return;
+        }
+
+        this.isSending(true);
+
+        this.model.update({
+            eid: this.eid(), code: this.code(), name: this.name(), address: this.address(), email: this.email(),
+            description: this.description(), phone: this.phone(), command: "insert"
+        }, (data) => {
+            this.isSending(false);
+
+            if ($.isArray(data)) {
+                toastr.error((<string[]>data).join("<br>"));
+                return;
+            }
+
+            if (data === -2) {
+                //toastr.warning(this.common.stringFormat(window.resources.common.message.alreadyExist, window.resources.admin.salon.title.infoWindowTitle));
+                return;
+            }
+            if (data === -3) {
+                //toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, window.resources.admin.salon.title.stateProvince));
+                return;
+            }
+            if (data > 0) {
+                toastr.success('Succefull');
+                this.resetForm();
+                //this.updateCallback();
+                $("#addOrEditForm").modal('hide');
+                this.formSearch();
+            }
+        });
+        return;
     }
 
     pageClickSearch(pageclickednumber: number) {
         this.search(pageclickednumber);
     }
-    
-    showAdd() {
-        this.requirePartial(() => {
-            //this.addEditSalonPartial().add(() => {
-            //    this.search(1);
-            //});
-            this.isShowAddOrEdit(true);
-        });
+
+    showAdd(updateCallback: Function) {
+        this.isAdd(true);
+        this.resetForm();
+        this.updateCallback = updateCallback;
+        $("#addOrEditForm").modal('show');
     }
 
     closeAddOrEdit = () => {
         this.isShowAddOrEdit(false);
     }
 
-    //showEdit = (item: ISalon) => {
-    //    this.requirePartial(() => {
-    //        this.addEditSalonPartial().edit(item, () => {
-    //            this.closeAddOrEdit();
-    //            this.search(this.currentPage);
-    //        });
-    //        this.isShowAddOrEdit(true);
-    //    });
-    //}
+    showEdit = (item, updateCallback: Function) => {
+        this.isAdd(false);
+        this.eid(item.EID);
+        this.code(item.Code);
+        this.name(item.Name);
+        this.phone(item.Phone);
+        this.email(item.Email);
+        this.address(item.Address);
+        this.description(item.Description);
+        this.updateCallback = updateCallback;
+        $("#addOrEditForm").modal('show');
+    }
 
-    //delete = (item: ISalon) => {
-    //    swal({
-    //        title: this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
-    //        text: "",
-    //        type: "warning",
-    //        showCancelButton: true,
-    //        confirmButtonText: window.resources.common.button.ok,
-    //        cancelButtonText: window.resources.common.button.cancel,
-    //        closeOnConfirm: true,
-    //        closeOnCancel: true
-    //    }, (isConfirm) => {
-    //        if (isConfirm) {
-    //            this.common.blockUI({ target: "#list", animate: true });
+    delete = (item) => {
+        swal({
+            title: "Delete item", //this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
+            text: "",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "OK", //window.resources.common.button.ok,
+            cancelButtonText: "Cancel", //window.resources.common.button.cancel,
+            closeOnConfirm: true,
+            closeOnCancel: true
+        }, (isConfirm) => {
+            if (isConfirm) {
+                //this.common.blockUI({ target: "#list", animate: true });
 
-    //            this.model.delete(item.id, window.token, (data) => {
-    //                if (data === -1) {
-    //                    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
-    //                    return;
-    //                }
-    //                if (data > 0) {
-    //                    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
-    //                }
-    //            });
-    //        }
-    //    });
-    //}
+                this.model.delete(item.id, window.token, (data) => {
+                    //if (data === -1) {
+                    //    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
+                    //    return;
+                    //}
+                    //if (data > 0) {
+                    //    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
+                    //}
+                });
+            }
+        });
+    }
+    resetForm() {
+        this.eid("");
+        this.code("");
+        this.name("");
+        this.email("");
+        this.phone("");
+        this.description("");
+        this.address("");
+        //setTimeout(() => { this.isFocusName(true); }, 100);
+    }
 }
 
 window.viewModel = new DepartmentViewModel();
