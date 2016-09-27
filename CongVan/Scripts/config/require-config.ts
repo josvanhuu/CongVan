@@ -5,8 +5,8 @@
 require.config({
     baseUrl: "/Scripts",
     paths: {
-        jquery: "jquery-3.1.0.min",
-        jqueryOlder: "../assets/js/jquery-1.11.3.min",
+        //jquery: "jquery-3.1.0.min",
+        jquery: "../assets/js/jquery-1.11.3.min",
         jqueryValidate: "jquery.validate.min",
         jqueryValidateUnobtrusive: "jquery.validate.unobtrusive.min",
         jqueryCookie: "jquery.cookie-1.4.1.min",
