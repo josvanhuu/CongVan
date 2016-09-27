@@ -22,7 +22,7 @@ namespace CongVan
             bundles.Add(new ScriptBundle("~/header/js").Include(
                       "~/assets/js/ace-extra.min.js"
                       ));
-                        
+
             bundles.Add(new ScriptBundle("~/footer/js").Include(
                       "~/scripts/jquery-3.1.0.js",
                       "~/assets/js/ace-elements.min.js",
@@ -43,7 +43,9 @@ namespace CongVan
                  "~/assets/css/ace.min.css",
                  "~/assets/css/ace-part2.min.css",
                  "~/assets/css/ace-skins.min.css",
-                 "~/assets/css/ace-rtl.min.css"
+                 "~/assets/css/ace-rtl.min.css",
+                 "~/Content/sweetalert/sweetalert.css",
+                 "~/Content/toastr.min.css"
                  ));
 
             bundles.Add(new ScriptBundle("~/bundles/require").Include(
