@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace CongVan.Areas.Admin.Controllers
@@ -14,13 +15,22 @@ namespace CongVan.Areas.Admin.Controllers
         // GET: Admin/Departments
         public ActionResult Index()
         {
-            ViewBag.Departments = Kids.Kid.DBContext.FetchAll<Departments>().ToJSON();
             return View();
         }
         [HttpPost]
-        public JsonResult Load()
+        public JsonResult Load(int pageIndex)
         {
-            var listDepartments = Kids.Kid.DBContext.FetchAll<Departments>().ToJSON();
+            var pageSize = int.Parse(WebConfigurationManager.AppSettings["pagesize"]);
+            var listDepartments = Kids.Kid.DBContext.FetchAll<Departments>().ToList();
+            if(listDepartments.Any() )
+            {
+                var pageCount = pageIndex * pageSize;
+                if (listDepartments.Count > pageCount)
+                    listDepartments = listDepartments.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+                else
+                    listDepartments = listDepartments.Skip((pageIndex-1) * pageSize).Take(listDepartments.Count -((pageIndex - 1) * pageSize)).ToList();
+            }
+            
             return Json(listDepartments, JsonRequestBehavior.AllowGet);
         }
         [HttpPost]

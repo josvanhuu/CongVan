@@ -4,11 +4,11 @@ import * as toastr from "toastr";
 import * as swal from "sweetalert";
 
 
-import { DeparmentModel, IDeparment } from "../../models/department/deparment-model";
+import { DocumentModel, IDocument } from "../../models/document/document-model";
 
-declare var listdeparments;
+//declare var listdeparments;
 
-class DepartmentViewModel {
+class DocumentViewModel {
     private totalPage: number = 0;
     private currentPage: number = 1;
     private recordPerPage: number = window.pageSize;
@@ -17,8 +17,7 @@ class DepartmentViewModel {
     isSearching: KnockoutObservable<boolean> = ko.observable(false);
     isShowAddOrEdit: KnockoutObservable<boolean> = ko.observable(false);
 
-    listDeparments: KnockoutObservableArray<IDeparment> = ko.observableArray([]);
-    //listDeparments: KnockoutObservableArray<any>;
+    listRolesSetting: KnockoutObservableArray<IDocument> = ko.observableArray([]);
 
     eid: KnockoutObservable<string> = ko.observable("");
     code: KnockoutObservable<string> = ko.observable("");
@@ -32,12 +31,11 @@ class DepartmentViewModel {
     isSending: KnockoutObservable<boolean> = ko.observable(false);
     isAdd: KnockoutObservable<boolean> = ko.observable(false);
 
-    private model: DeparmentModel;
+    private model: DocumentModel;
     private updateCallback: Function;
 
     constructor() {
-        this.model = new DeparmentModel();
-        //this.listDeparments(listdeparments);
+        this.model = new DocumentModel();
 
         $(() => {
             //this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
@@ -58,11 +56,10 @@ class DepartmentViewModel {
     search(page: number) {
         this.currentPage = page;
         this.isSearching(true);
-        this.model.load(1, (data) => {
+        this.model.load((data) => {
             //console.log(data);
             this.isSearching(false);
-            this.listDeparments(data);
-            //console.log(this.listDeparments());
+            this.listRolesSetting(data);
             //this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
         });
     }
@@ -74,34 +71,34 @@ class DepartmentViewModel {
 
         this.isSending(true);
 
-        this.model.update({
-            eid: this.eid(), code: this.code(), name: this.name(), address: this.address(), email: this.email(),
-            description: this.description(), phone: this.phone(), command: "insert"
-        }, (data) => {
-            this.isSending(false);
+        //this.model.update({
+        //    eid: this.eid(), code: this.code(), name: this.name(), address: this.address(), email: this.email(),
+        //    description: this.description(), phone: this.phone(), command: "insert"
+        //}, (data) => {
+        //    this.isSending(false);
 
-            if ($.isArray(data)) {
-                toastr.error((<string[]>data).join("<br>"));
-                return;
-            }
+        //    if ($.isArray(data)) {
+        //        toastr.error((<string[]>data).join("<br>"));
+        //        return;
+        //    }
 
-            if (data === -2) {
-                //toastr.warning(this.common.stringFormat(window.resources.common.message.alreadyExist, window.resources.admin.salon.title.infoWindowTitle));
-                return;
-            }
-            if (data === -3) {
-                //toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, window.resources.admin.salon.title.stateProvince));
-                return;
-            }
-            if (data > 0) {
-                toastr.success('Succefull');
-                this.resetForm();
-                //this.updateCallback();
-                $("#addOrEditForm").modal('hide');
-                this.search(1);
-            }
-        });
-        return;
+        //    if (data === -2) {
+        //        //toastr.warning(this.common.stringFormat(window.resources.common.message.alreadyExist, window.resources.admin.salon.title.infoWindowTitle));
+        //        return;
+        //    }
+        //    if (data === -3) {
+        //        //toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, window.resources.admin.salon.title.stateProvince));
+        //        return;
+        //    }
+        //    if (data > 0) {
+        //        toastr.success('Succefull');
+        //        this.resetForm();
+        //        //this.updateCallback();
+        //        $("#addOrEditForm").modal('hide');
+        //        this.search(1);
+        //    }
+        //});
+        //return;
     }
 
     pageClickSearch(pageclickednumber: number) {
@@ -170,5 +167,5 @@ class DepartmentViewModel {
     }
 }
 
-window.viewModel = new DepartmentViewModel();
+window.viewModel = new DocumentViewModel();
 ko.applyBindings(window.viewModel, document.getElementById("page-content"));

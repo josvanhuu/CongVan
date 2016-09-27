@@ -1,74 +1,75 @@
 ﻿import * as amplify from "amplify";
 
-amplify.request.define("Search", "ajax", {
-    url: "/Admin/Departments/Search",
-    dataType: "json",
-    type: "GET"
-});
+//amplify.request.define("Search", "ajax", {
+//    url: "/Admin/Departments/Search",
+//    dataType: "json",
+//    type: "GET"
+//});
 
 amplify.request.define("Load", "ajax", {
-    url: "/Admin/Departments/Load",
+    url: "/Admin/RolesSetting/Load",
     dataType: "json",
     type: "POST"
 });
 
 amplify.request.define("Insert", "ajax", {
-    url: "/Admin/Departments/Insert",
+    url: "/Admin/RolesSetting/Insert",
     dataType: "json",
     type: "POST"
 });
 
 amplify.request.define("Update", "ajax", {
-    url: "/Admin/Departments/Update",
+    url: "/Admin/RolesSetting/Update",
     dataType: "json",
     type: "POST"
 });
 
 amplify.request.define("Delete", "ajax", {
-    url: "/Admin/Departments/Delete",
+    url: "/Admin/RolesSetting/Delete",
     dataType: "json",
     type: "POST"
 });
 
-export interface IDeparment {
+export interface IRolesSetting {
     address: string,
     code: string,
     description: string,
     eid: string
     email: string,
+    isnew: boolean,
     name: string,
     phone: string
 }
 
-export interface IInsertDeparment extends IDeparment {
+export interface IInsertRolesSetting extends IRolesSetting {
     command: string;
     //__RequestVerificationToken: string;
 }
 
-export class DeparmentModel {
+export class RolesSettingModel {
 
-    search(name: string, page: number, pageSize: number, callback: (data: IListWithTotalRecord<IDeparment>) => void) {
+    search(name: string, page: number, pageSize: number, callback: (data: IListWithTotalRecord<IRolesSetting>) => void) {
         amplify.request("Search", { name: name, page: page, pageSize: pageSize },
             (result) => {
                 callback(result);
             });
     }
 
-    load(pageIndex: number, callback: (data) => void) {
-        amplify.request("Load", { pageIndex: pageIndex},
+    load(callback: (data) => void) {
+        amplify.request("Load", {},
             (result) => {
                 callback(result);
             });
     }
 
-    insert(model: IInsertDeparment, callback: (data) => void) {
+    insert(model: IInsertRolesSetting, callback: (data) => void) {
         amplify.request("Insert", model,
             (result) => {
                 callback(result);
             });
     }
 
-    update(model: IInsertDeparment, callback: (data) => void) {
+    update(model: IInsertRolesSetting, callback: (data) => void) {
         amplify.request("Update", model,
             (result) => {
                 callback(result);

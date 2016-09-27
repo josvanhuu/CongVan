@@ -252,6 +252,8 @@
     <Compile Include="Controllers\SubMenuNavigationManager.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Entities\Departments.cs" />
+    <Compile Include="Entities\Document.cs" />
+    <Compile Include="Entities\RolesSetting.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -917,6 +919,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\config\require-config.ts" />
     <TypeScriptCompile Include="Scripts\models\department\deparment-model.ts" />
+    <TypeScriptCompile Include="Scripts\models\document\document-model.ts" />
+    <TypeScriptCompile Include="Scripts\models\rolesettings\rolesettings-model.ts" />
     <TypeScriptCompile Include="Scripts\typings\amplifyjs\amplifyjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
@@ -948,7 +952,9 @@
     <TypeScriptCompile Include="Scripts\typings\sweetalert\sweetalert.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\toastr\toastr.d.ts" />
     <TypeScriptCompile Include="Scripts\viewmodels\Departments\departments-viewmodel.ts" />
+    <TypeScriptCompile Include="Scripts\viewmodels\Document\document-viewmodel.ts" />
     <TypeScriptCompile Include="Scripts\viewmodels\global-declare.ts" />
+    <TypeScriptCompile Include="Scripts\viewmodels\RolesSetting\rolesettings-viewmodel.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

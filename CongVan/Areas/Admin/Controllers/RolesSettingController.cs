@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CongVan.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,12 @@ namespace CongVan.Areas.Admin.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+        [HttpPost]
+        public JsonResult Load()
+        {
+            var listRolesSetting = Kids.Kid.DBContext.FetchAll<RolesSetting>().ToList();
+            return Json(listRolesSetting, JsonRequestBehavior.AllowGet);
         }
     }
 }

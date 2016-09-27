@@ -1,10 +1,15 @@
-﻿using Kids.Entities;
+﻿
+using Kids.Entities;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
 
 namespace CongVan.Entities
 {
-    [Table("kid_Departments")]
-    public class Departments : Entity
+    [Table("kid_Document")]
+    public class Document : Entity
     {
         public string Code { get; set; }
         public string Name { get; set; }
