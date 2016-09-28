@@ -26,34 +26,17 @@ require.config({
         ace: "../assets/js/ace.min",
         async: "plugins/requirejs-plugins/async",
         "blueimp-md5": "plugins/blueimp-md5/md5.min",
-        //adminLayout: "../assets/layouts/layout2/scripts/layout.min",
         globalizeCore: "globalize.0.1.3/globalize",
         wysiwyg: "plugins/wysiwyg/src/wysiwyg",
         wysiwygEditor: "plugins/wysiwyg/src/wysiwyg-editor",
-        //proviewEditor: "plugins/wysiwyg/src/proviewEditor",
         sweetalert: "plugins/sweetalert/sweetalert.min",
         globalize: "globalize.0.1.3/cultures/globalize.culture." + window.currentCulture,
         //resourceCommon: `resources/common${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
         //resourceAdmin: `resources/admin/admin${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
-        validate: "common/validate"
+        validate: "common/validate",
+        dropzone: "../assets/js/dropzone.min"
     },
     shim: {
-        //bootstrap: ["jquery"],
-        //bootstrapDatetimepicker: ["jquery", "moment"],
-        //amplify: {
-        //    deps: ["jquery"],
-        //    exports: "amplify"
-        //},
-        //jqueryValidate: ["jquery"],
-        //jqueryValidateUnobtrusive: ["jquery", "jqueryValidate"],
-        //jqueryPager: ["jquery"],
-        //jqueryCookie: ["jquery"],
-        //jqueryBlockUI: ["jquery"],
-        //adminApp: ["jquery", "bootstrap", "respond"],
-        //adminLayout: ["jqueryCookie", "adminApp"],
-        //globalize: ["globalizeCore"],
-        //wysiwygEditor: ["wysiwyg", "jquery"],
-        //proviewEditor: ["wysiwygEditor"]
         bootstrap: ["jquery"],
         amplify: {
             deps: ["jquery"],
@@ -65,8 +48,7 @@ require.config({
         jqueryCookie: ["jquery"],
         aceElement: ["jquery"],
         ace: ["jquery", "bootstrap", "aceExtra", "aceElement"],
-        //adminLayout: ["jqueryCookie", "adminApp"],
-        globalize: ["globalizeCore"]
+        globalize: ["globalizeCore"],
     }
 });
 //# sourceMappingURL=require-config.js.map

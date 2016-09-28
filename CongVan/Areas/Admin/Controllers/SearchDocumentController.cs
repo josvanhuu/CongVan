@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace CongVan.Areas.Admin.Controllers
 {
-    public class DocumentSettingsController : Controller
+    public class SearchDocumentController : Controller
     {
-        // GET: Admin/DocumentSettings
+        // GET: Admin/SearchDocument
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult DocumentType()
         {
             return View();
         }

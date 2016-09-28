@@ -13,5 +13,14 @@ namespace CongVan.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public new ActionResult Profile()
+        {
+            return View();
+        }
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
     }
 }

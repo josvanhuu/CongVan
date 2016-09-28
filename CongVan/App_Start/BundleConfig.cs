@@ -45,7 +45,13 @@ namespace CongVan
                  "~/assets/css/ace-skins.min.css",
                  "~/assets/css/ace-rtl.min.css",
                  "~/Content/sweetalert/sweetalert.css",
-                 "~/Content/toastr.min.css"
+                 "~/Content/toastr.min.css",
+                 "~/assets/css/dropzone.css"
+                 ));
+
+            bundles.Add(new StyleBundle("~/infragistics/css").Include(
+                 "~/Content/infragistics/infragistics.css",
+                 "~/Content/infragistics/infragistics.theme.css"
                  ));
 
             bundles.Add(new ScriptBundle("~/bundles/require").Include(
