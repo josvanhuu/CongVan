@@ -35,15 +35,10 @@ require.config({
         sweetalert: "plugins/sweetalert/sweetalert.min",
         
         globalize: `globalize.0.1.3/cultures/globalize.culture.${window.currentCulture}`,
-        //resourceCommon: `resources/common${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
+        resourceCommon: `resources/common.vi-VN`,
         //resourceAdmin: `resources/admin/admin${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
         validate: "common/validate",
         dropzone: "../assets/js/dropzone.min"
-        //modernizr: "../Content/infragistics/modernizr-2.8.3",
-        //jquery: "../Content/infragistics/jquery-1.9.1.min",
-        //jqueryui: "../Content/infragistics/jquery-ui.min",
-        //infragisticscore: "../Content/infragistics/infragistics.core",
-        //infragisticslob: "../Content/infragistics/infragistics.lob",
     },
     shim: {
         bootstrap: ["jquery"],

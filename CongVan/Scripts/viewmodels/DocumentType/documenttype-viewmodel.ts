@@ -71,7 +71,7 @@ class DocumenttypeViewModel {
         this.isSending(true);
 
         this.model.update({
-            eid: this.eid(), code: this.code(), name: this.name(), des: this.des(), command: "insert"
+            eid: this.eid(), code: this.code(), name: this.name(), des: this.des()
         }, (data) => {
             this.isSending(false);
 
@@ -127,11 +127,11 @@ class DocumenttypeViewModel {
     delete = (item) => {
         swal({
             title: "Delete item", //this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
-            text: "",
+            text: item.name,
             type: "warning",
             showCancelButton: true,
-            confirmButtonText: "OK", //window.resources.common.button.ok,
-            cancelButtonText: "Cancel", //window.resources.common.button.cancel,
+            confirmButtonText: "Đồng ý", //window.resources.common.button.ok,
+            cancelButtonText: "Hủy", //window.resources.common.button.cancel,
             closeOnConfirm: true,
             closeOnCancel: true
         }, (isConfirm) => {
@@ -139,13 +139,13 @@ class DocumenttypeViewModel {
                 //this.common.blockUI({ target: "#list", animate: true });
 
                 this.model.delete(item.id, window.token, (data) => {
-                    //if (data === -1) {
-                    //    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
-                    //    return;
-                    //}
-                    //if (data > 0) {
-                    //    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
-                    //}
+                    if (data === -1) {
+                        toastr.warning('Không thể xóa!');
+                        return;
+                    }
+                    if (data > 0) {
+                        toastr.success('Xóa thành công!');
+                    }
                 });
             }
         });

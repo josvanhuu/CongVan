@@ -31,14 +31,22 @@ amplify.request.define("Delete", "ajax", {
 });
 
 export interface IDocument {
-    address: string,
-    code: string,
-    description: string,
-    eid: string
-    email: string,
-    isnew: boolean,
+    eid: string,
+    documentcode: string,
+    documentname: string,
+    documentdes: string,
+    documentdate: string,
+    documentdateaction: string,
+    documenttype: string,
+    documentdepartment: string,
+
     name: string,
-    phone: string
+    filename: string,
+    filedescription: string,
+    filepath: string,
+    filetype: string,
+    filedirect: string,
+    filedatecreated: string
 }
 
 export interface IInsertDocument extends IDocument {
@@ -55,8 +63,8 @@ export class DocumentModel {
             });
     }
 
-    load(callback: (data) => void) {
-        amplify.request("Load", {},
+    load(pageIndex: number, callback: (data) => void) {
+        amplify.request("Load", { pageIndex: pageIndex},
             (result) => {
                 callback(result);
             });

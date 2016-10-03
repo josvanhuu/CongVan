@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MenuRoot>
+  <Menu id="home" text="Home" url="home.aspx"></Menu>
+  <Menu id="projects" text="Projects" url="projects.aspx">
+    <SubMenu id="sub1" text="Sub One" url="subone.aspx"></SubMenu>
+    <SubMenu id="sub2" text="Sub Two" url="subtwo.aspx"></SubMenu>
+  </Menu>
+</MenuRoot>

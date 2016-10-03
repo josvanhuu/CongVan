@@ -31,5 +31,49 @@ namespace CongVan.Areas.Admin.Controllers
 
             return Json(listDocumentType, JsonRequestBehavior.AllowGet);
         }
+        [HttpPost]
+        public async System.Threading.Tasks.Task<JsonResult> Update(string eid, string code, string name, string des)
+        {
+            var documenttype = new DocumentType();
+            documenttype.Name = name;
+            documenttype.Code = code;
+            documenttype.Des = des;
+            try
+            {
+                if (eid == string.Empty)
+                {
+                    await Kids.Kid.DBContext.AddAsync(documenttype);
+                }
+                else
+                {
+                    documenttype.EID = eid;
+                    await Kids.Kid.DBContext.UpdateAsync(documenttype);
+                }
+
+            }
+            catch (Exception)
+            {
+                return Json(0, JsonRequestBehavior.AllowGet);
+            }
+            return Json(1, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public async System.Threading.Tasks.Task<JsonResult> Delete(string eid)
+        {
+            var documenttype = new DocumentType();
+
+            var listDocumentByType = Kids.Kid.DBContext.FetchAll<Document>().Where(x => x.DocumentType == eid).ToList();
+            if (listDocumentByType.Any())
+            {
+                return Json(0, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                documenttype.EID = eid;
+
+                await Kids.Kid.DBContext.DeleteAsync(documenttype);
+            }
+            return Json(1, JsonRequestBehavior.AllowGet);
+        }
     }
 }

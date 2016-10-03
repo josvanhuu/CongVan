@@ -30,7 +30,7 @@
                     <small>
                         <img src="~/assets/images/logo/logo-hospital-hi.png" height="26" />
                         <i class="glyphicon glyphicon-star-empty"></i>
-                            Bệnh Viện Đa Khoa Hải Dương
+                        Bệnh Viện Đa Khoa Hải Dương
                     </small>
                 </a>
 
@@ -123,9 +123,9 @@
         <div id="sidebar" class="sidebar h-sidebar navbar-collapse collapse ace-save-state">
             @Html.Partial("~/Views/Navigation/TopNavigation.cshtml")
         </div>
-
-        @RenderBody()
-
+        <div class="main-content" id="page-content">
+            @RenderBody()
+        </div><!-- /.main-content -->
 
         <div class="footer">
             <div class="footer-inner">
@@ -164,7 +164,7 @@
     <script src="~/Scripts/config/require-config.js"></script>
 
     <script type="text/javascript">
-        require(["ace"]);
+        require(["ace", "viewmodels/globalnavi"]);
     </script>
 
     @RenderSection("scripts", required: false)

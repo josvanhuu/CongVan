@@ -2,23 +2,27 @@
 import * as ko from "knockout";
 import * as toastr from "toastr";
 import * as swal from "sweetalert";
+import { Common } from "../../common/common";
 
+import "jqueryPager";
+import "resourceCommon";
 
 import { DeparmentModel, IDeparment } from "../../models/department/deparment-model";
 
-declare var listdeparments;
+//declare var listDeparments: IListWithTotalRecord<any>; //: IListWithTotalRecord<IDeparment>;
+//declare var totalCount: number;
 
 class DepartmentViewModel {
     private totalPage: number = 0;
     private currentPage: number = 1;
-    private recordPerPage: number = window.pageSize;
+    private recordPerPage: number = 10; //window.pageSize;
+    private common: Common;
 
     keyword: KnockoutObservable<string> = ko.observable("");
     isSearching: KnockoutObservable<boolean> = ko.observable(false);
     isShowAddOrEdit: KnockoutObservable<boolean> = ko.observable(false);
 
-    listDeparments: KnockoutObservableArray<IDeparment> = ko.observableArray([]);
-    //listDeparments: KnockoutObservableArray<any>;
+    listdeparments: KnockoutObservableArray<IDeparment> = ko.observableArray([]);
 
     eid: KnockoutObservable<string> = ko.observable("");
     code: KnockoutObservable<string> = ko.observable("");
@@ -32,38 +36,32 @@ class DepartmentViewModel {
     isSending: KnockoutObservable<boolean> = ko.observable(false);
     isAdd: KnockoutObservable<boolean> = ko.observable(false);
 
+    title: string = " 'Phòng ban' "; // window.resources.admin.salon.title.name;
+
     private model: DeparmentModel;
     private updateCallback: Function;
 
     constructor() {
         this.model = new DeparmentModel();
-        //this.listDeparments(listdeparments);
+        this.common = new Common();
 
         $(() => {
-            //this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
             this.search(1);
         });
 
-        //this.model = new DepartmentsModel();
-        //$(() => {
-        //    this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
-        //    this.listSalons(listSalons.result);
-        //});
     }
 
     formSearch() {
         this.search(1);
     }
 
-    search(page: number) {
+    private search(page: number) {
         this.currentPage = page;
         this.isSearching(true);
-        this.model.load(1, (data) => {
-            //console.log(data);
+        this.model.load(this.currentPage, (data) => {
             this.isSearching(false);
-            this.listDeparments(data);
-            //console.log(this.listDeparments());
-            //this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
+            this.listdeparments(data.listDepartments);
+            this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
         });
     }
 
@@ -104,8 +102,9 @@ class DepartmentViewModel {
         return;
     }
 
-    pageClickSearch(pageclickednumber: number) {
-        this.search(pageclickednumber);
+    pageClickSearch(page: number) {
+        this.formSearch();
+        //this.search(page);
     }
 
     showAdd(updateCallback: Function) {
@@ -134,12 +133,12 @@ class DepartmentViewModel {
 
     delete = (item) => {
         swal({
-            title: "Delete item", //this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
+            title: this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
             text: "",
             type: "warning",
             showCancelButton: true,
-            confirmButtonText: "OK", //window.resources.common.button.ok,
-            cancelButtonText: "Cancel", //window.resources.common.button.cancel,
+            confirmButtonText: window.resources.common.button.ok,
+            cancelButtonText: window.resources.common.button.cancel,
             closeOnConfirm: true,
             closeOnCancel: true
         }, (isConfirm) => {
@@ -147,13 +146,13 @@ class DepartmentViewModel {
                 //this.common.blockUI({ target: "#list", animate: true });
 
                 this.model.delete(item.id, window.token, (data) => {
-                    //if (data === -1) {
-                    //    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
-                    //    return;
-                    //}
-                    //if (data > 0) {
-                    //    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
-                    //}
+                    if (data === -1) {
+                        toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
+                        return;
+                    }
+                    if (data > 0) {
+                        toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
+                    }
                 });
             }
         });
@@ -167,6 +166,16 @@ class DepartmentViewModel {
         this.description("");
         this.address("");
         //setTimeout(() => { this.isFocusName(true); }, 100);
+    }
+    private renderPage(page: number, totalRecord: number) {
+        this.totalPage = Math.ceil(totalRecord / this.recordPerPage);
+
+        const from: number = (this.currentPage - 1) * this.recordPerPage + 1;
+        const to: number = (this.currentPage * this.recordPerPage < totalRecord ? this.currentPage * this.recordPerPage : totalRecord);
+
+        $("#sumarypager").html(totalRecord === 0 ? this.common.stringFormat(window.resources.common.pager.noRecord, this.title) : this.common.stringFormat(window.resources.common.pager.description, from, to, totalRecord, this.title));
+
+        $("#pager").pager({ pagenumber: page, pagecount: this.totalPage, totalrecords: totalRecord, buttonClickCallback: this.pageClickSearch });
     }
 }
 

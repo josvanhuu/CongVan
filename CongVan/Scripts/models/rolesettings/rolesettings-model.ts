@@ -31,18 +31,15 @@ amplify.request.define("Delete", "ajax", {
 });
 
 export interface IRolesSetting {
-    address: string,
+    eid: string,
+    name: string,
     code: string,
     description: string,
-    eid: string
-    email: string,
-    isnew: boolean,
-    name: string,
-    phone: string
+    status: boolean
 }
 
 export interface IInsertRolesSetting extends IRolesSetting {
-    command: string;
+    //command: string;
     //__RequestVerificationToken: string;
 }
 

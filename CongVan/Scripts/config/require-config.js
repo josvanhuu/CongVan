@@ -31,7 +31,7 @@ require.config({
         wysiwygEditor: "plugins/wysiwyg/src/wysiwyg-editor",
         sweetalert: "plugins/sweetalert/sweetalert.min",
         globalize: "globalize.0.1.3/cultures/globalize.culture." + window.currentCulture,
-        //resourceCommon: `resources/common${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
+        resourceCommon: "resources/common.vi-VN",
         //resourceAdmin: `resources/admin/admin${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
         validate: "common/validate",
         dropzone: "../assets/js/dropzone.min"

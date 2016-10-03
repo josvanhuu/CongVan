@@ -4,6 +4,25 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+@section scripts {
+    @*<script type="text/template" id="searchdocumentTemplate">
+        <tr>
+            <td class="text-center" data-bind="text: $index()+1"></td>
+            <td class="text-center" data-bind="text: Code"></td>
+            <td data-bind="text: Name"></td>
+            <td data-bind="text: Des"></td>
+            <td class="text-center">
+                <a data-original-title="Edit" data-placement="top" class="btn btn-sm btn-primary tooltips" href="javascript:;" data-bind="click: $parent.showEdit"><i class="fa fa-edit"></i></a>
+                <a data-original-title="Delete" data-placement="top" class="btn btn-sm btn-danger tooltips" href="javascript:;" data-bind="click: $parent.delete"><i class="fa fa-times fa fa-white"></i></a>
+            </td>
+        </tr>
+    </script>*@
+    <script type="text/javascript">
+        var naviactive = "report";
+        //require(["viewmodels/DocumentType/documenttype-viewmodel", "jqueryValidate"]);
+    </script>
+}
+
 <div class="main-content">
     <div class="main-content-inner">
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">

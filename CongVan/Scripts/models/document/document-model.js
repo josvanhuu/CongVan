@@ -33,8 +33,8 @@ define(["require", "exports", "amplify"], function (require, exports, amplify) {
                 callback(result);
             });
         };
-        DocumentModel.prototype.load = function (callback) {
-            amplify.request("Load", {}, function (result) {
+        DocumentModel.prototype.load = function (pageIndex, callback) {
+            amplify.request("Load", { pageIndex: pageIndex }, function (result) {
                 callback(result);
             });
         };

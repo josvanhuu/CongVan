@@ -9,13 +9,15 @@ using System.Web;
 
 namespace CongVan.Entities
 {
-    //[Table("kid_Document")]
     public class Document : FileEntity
     {
-        public string Code { get; set; }
-        public string Address { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
+        public string DocumentCode { get; set; }
+        public string DocumentName { get; set; }
+        public string DocumentDes { get; set; }
+        public DateTime? DocumentDate { get; set; }
+        public DateTime? DocumentDateAction { get; set; }
         public string DocumentType { get; set; }
+        public string DocumentDepartment { get; set; }
+        //public List<User> DocumentUser { get; set; }
     }
 }

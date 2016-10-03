@@ -3,6 +3,10 @@ import * as ko from "knockout";
 import * as toastr from "toastr";
 import * as swal from "sweetalert";
 
+import { Common } from "../../common/common";
+
+import "jqueryPager";
+import "resourceCommon";
 
 import { RolesSettingModel, IRolesSetting } from "../../models/rolesettings/rolesettings-model";
 
@@ -12,6 +16,7 @@ class RolesSettingViewModel {
     private totalPage: number = 0;
     private currentPage: number = 1;
     private recordPerPage: number = window.pageSize;
+    private common: Common;
 
     keyword: KnockoutObservable<string> = ko.observable("");
     isSearching: KnockoutObservable<boolean> = ko.observable(false);
@@ -22,31 +27,26 @@ class RolesSettingViewModel {
     eid: KnockoutObservable<string> = ko.observable("");
     code: KnockoutObservable<string> = ko.observable("");
     name: KnockoutObservable<string> = ko.observable("");
-    address: KnockoutObservable<string> = ko.observable("");
-    email: KnockoutObservable<string> = ko.observable("");
-    phone: KnockoutObservable<string> = ko.observable("");
     description: KnockoutObservable<string> = ko.observable("");
+    status: KnockoutObservable<boolean> = ko.observable(true);
 
     isFocusName: KnockoutObservable<boolean> = ko.observable(false);
     isSending: KnockoutObservable<boolean> = ko.observable(false);
     isAdd: KnockoutObservable<boolean> = ko.observable(false);
+
+    title: string = " 'Quyền truy cập' "; // window.resources.admin.salon.title.name;
 
     private model: RolesSettingModel;
     private updateCallback: Function;
 
     constructor() {
         this.model = new RolesSettingModel();
+        this.common = new Common();
 
         $(() => {
             //this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
             this.search(1);
         });
-
-        //this.model = new DepartmentsModel();
-        //$(() => {
-        //    this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
-        //    this.listSalons(listSalons.result);
-        //});
     }
 
     formSearch() {
@@ -57,7 +57,6 @@ class RolesSettingViewModel {
         this.currentPage = page;
         this.isSearching(true);
         this.model.load((data) => {
-            //console.log(data);
             this.isSearching(false);
             this.listRolesSetting(data);
             //this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
@@ -71,34 +70,33 @@ class RolesSettingViewModel {
 
         this.isSending(true);
 
-        //this.model.update({
-        //    eid: this.eid(), code: this.code(), name: this.name(), address: this.address(), email: this.email(),
-        //    description: this.description(), phone: this.phone(), command: "insert"
-        //}, (data) => {
-        //    this.isSending(false);
+        this.model.update({
+            eid: this.eid(), code: this.code(), name: this.name(), description: this.description(), status: this.status()
+        }, (data) => {
+            this.isSending(false);
 
-        //    if ($.isArray(data)) {
-        //        toastr.error((<string[]>data).join("<br>"));
-        //        return;
-        //    }
+            if ($.isArray(data)) {
+                toastr.error((<string[]>data).join("<br>"));
+                return;
+            }
 
-        //    if (data === -2) {
-        //        //toastr.warning(this.common.stringFormat(window.resources.common.message.alreadyExist, window.resources.admin.salon.title.infoWindowTitle));
-        //        return;
-        //    }
-        //    if (data === -3) {
-        //        //toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, window.resources.admin.salon.title.stateProvince));
-        //        return;
-        //    }
-        //    if (data > 0) {
-        //        toastr.success('Succefull');
-        //        this.resetForm();
-        //        //this.updateCallback();
-        //        $("#addOrEditForm").modal('hide');
-        //        this.search(1);
-        //    }
-        //});
-        //return;
+            if (data === -2) {
+                //toastr.warning(this.common.stringFormat(window.resources.common.message.alreadyExist, window.resources.admin.salon.title.infoWindowTitle));
+                return;
+            }
+            if (data === -3) {
+                //toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, window.resources.admin.salon.title.stateProvince));
+                return;
+            }
+            if (data > 0) {
+                toastr.success('Succefull');
+                this.resetForm();
+                //this.updateCallback();
+                $("#addOrEditForm").modal('hide');
+                this.search(1);
+            }
+        });
+        return;
     }
 
     pageClickSearch(pageclickednumber: number) {
@@ -121,36 +119,33 @@ class RolesSettingViewModel {
         this.eid(item.EID);
         this.code(item.Code);
         this.name(item.Name);
-        this.phone(item.Phone);
-        this.email(item.Email);
-        this.address(item.Address);
-        this.description(item.Description);
+        this.description(item.Des);
         this.updateCallback = updateCallback;
         $("#addOrEditForm").modal('show');
     }
 
     delete = (item) => {
         swal({
-            title: "Delete item", //this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
+            title: this.common.stringFormat(window.resources.common.message.confirmDelete, this.title),
             text: "",
             type: "warning",
             showCancelButton: true,
-            confirmButtonText: "OK", //window.resources.common.button.ok,
-            cancelButtonText: "Cancel", //window.resources.common.button.cancel,
+            confirmButtonText: window.resources.common.button.ok,
+            cancelButtonText: window.resources.common.button.cancel,
             closeOnConfirm: true,
             closeOnCancel: true
         }, (isConfirm) => {
             if (isConfirm) {
-                //this.common.blockUI({ target: "#list", animate: true });
+                this.common.blockUI({ target: "#list", animate: true });
 
                 this.model.delete(item.id, window.token, (data) => {
-                    //if (data === -1) {
-                    //    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
-                    //    return;
-                    //}
-                    //if (data > 0) {
-                    //    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
-                    //}
+                    if (data === -1) {
+                        toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
+                        return;
+                    }
+                    if (data > 0) {
+                        toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
+                    }
                 });
             }
         });
@@ -159,10 +154,7 @@ class RolesSettingViewModel {
         this.eid("");
         this.code("");
         this.name("");
-        this.email("");
-        this.phone("");
         this.description("");
-        this.address("");
         //setTimeout(() => { this.isFocusName(true); }, 100);
     }
 }

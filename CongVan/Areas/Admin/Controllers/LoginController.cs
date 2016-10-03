@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using Kids.User.Identity;
 using Kids.Admin;
 using System.Threading.Tasks;
-using Kids.Helpers;
+
 
 namespace CongVan.Areas.Admin.Controllers
 {
@@ -31,15 +28,24 @@ namespace CongVan.Areas.Admin.Controllers
             {
                 var userStore = new TUserStore<KidUser>();
                 IUser user = userStore.ValidateUser(username, password);
-                if (user == null) return RedirectToAction("Admin/Login");
+                if (user == null) return Redirect("/Admin/Login");
 
                 Kids.Kid.Authentication.SignIn(user, true);
+                if (Request.UrlReferrer.ToString().ToLower().Contains("returnurl"))
+                {
+                    var action = Request.UrlReferrer.ToString().Split('?')[1];
+                    action = HttpUtility.UrlDecode(action).Split('=')[1];
+                    if (action.Trim() != string.Empty)
+                        return Redirect(action);
+                    else
+                        return RedirectToAction("Admin/Document/Search");
+                }
                 return RedirectToAction("Index");
             }
             else if (command == "logout")
             {
                 Kids.Kid.Authentication.SignOut();
-                return RedirectToAction("Admin/Login");
+                return Redirect("Admin/Login");
             }
 
             return View("Index");

@@ -32,24 +32,24 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             this.delete = function (item) {
                 swal({
                     title: "Delete item",
-                    text: "",
+                    text: item.name,
                     type: "warning",
                     showCancelButton: true,
-                    confirmButtonText: "OK",
-                    cancelButtonText: "Cancel",
+                    confirmButtonText: "Đồng ý",
+                    cancelButtonText: "Hủy",
                     closeOnConfirm: true,
                     closeOnCancel: true
                 }, function (isConfirm) {
                     if (isConfirm) {
                         //this.common.blockUI({ target: "#list", animate: true });
                         _this.model.delete(item.id, window.token, function (data) {
-                            //if (data === -1) {
-                            //    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
-                            //    return;
-                            //}
-                            //if (data > 0) {
-                            //    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
-                            //}
+                            if (data === -1) {
+                                toastr.warning('Không thể xóa!');
+                                return;
+                            }
+                            if (data > 0) {
+                                toastr.success('Xóa thành công!');
+                            }
                         });
                     }
                 });
@@ -88,7 +88,7 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             }
             this.isSending(true);
             this.model.update({
-                eid: this.eid(), code: this.code(), name: this.name(), des: this.des(), command: "insert"
+                eid: this.eid(), code: this.code(), name: this.name(), des: this.des()
             }, function (data) {
                 _this.isSending(false);
                 if ($.isArray(data)) {

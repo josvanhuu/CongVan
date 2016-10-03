@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace CongVan.Areas.Admin.Controllers
 {
@@ -22,16 +24,17 @@ namespace CongVan.Areas.Admin.Controllers
         {
             var pageSize = int.Parse(WebConfigurationManager.AppSettings["pagesize"]);
             var listDepartments = Kids.Kid.DBContext.FetchAll<Departments>().ToList();
-            if(listDepartments.Any() )
+            var totalRecord = listDepartments.Count;
+            if (listDepartments.Any())
             {
                 var pageCount = pageIndex * pageSize;
                 if (listDepartments.Count > pageCount)
                     listDepartments = listDepartments.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
                 else
-                    listDepartments = listDepartments.Skip((pageIndex-1) * pageSize).Take(listDepartments.Count -((pageIndex - 1) * pageSize)).ToList();
+                    listDepartments = listDepartments.Skip((pageIndex - 1) * pageSize).Take(listDepartments.Count - ((pageIndex - 1) * pageSize)).ToList();
             }
-            
-            return Json(listDepartments, JsonRequestBehavior.AllowGet);
+
+            return Json(new { listDepartments, totalRecord}, JsonRequestBehavior.AllowGet);
         }
         [HttpPost]
         public async Task<JsonResult> Update(string eid, string code, string name, string address, string phone, string email, string description)

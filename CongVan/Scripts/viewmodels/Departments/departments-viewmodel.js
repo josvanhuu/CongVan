@@ -1,16 +1,17 @@
-define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../../models/department/deparment-model"], function (require, exports, $, ko, toastr, swal, deparment_model_1) {
+define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../../common/common", "../../models/department/deparment-model", "jqueryPager", "resourceCommon"], function (require, exports, $, ko, toastr, swal, common_1, deparment_model_1) {
     "use strict";
+    //declare var listDeparments: IListWithTotalRecord<any>; //: IListWithTotalRecord<IDeparment>;
+    //declare var totalCount: number;
     var DepartmentViewModel = (function () {
         function DepartmentViewModel() {
             var _this = this;
             this.totalPage = 0;
             this.currentPage = 1;
-            this.recordPerPage = window.pageSize;
+            this.recordPerPage = 10; //window.pageSize;
             this.keyword = ko.observable("");
             this.isSearching = ko.observable(false);
             this.isShowAddOrEdit = ko.observable(false);
-            this.listDeparments = ko.observableArray([]);
-            //listDeparments: KnockoutObservableArray<any>;
+            this.listdeparments = ko.observableArray([]);
             this.eid = ko.observable("");
             this.code = ko.observable("");
             this.name = ko.observable("");
@@ -21,6 +22,7 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             this.isFocusName = ko.observable(false);
             this.isSending = ko.observable(false);
             this.isAdd = ko.observable(false);
+            this.title = " 'Phòng ban' "; // window.resources.admin.salon.title.name;
             this.closeAddOrEdit = function () {
                 _this.isShowAddOrEdit(false);
             };
@@ -38,40 +40,34 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             };
             this.delete = function (item) {
                 swal({
-                    title: "Delete item",
+                    title: _this.common.stringFormat(window.resources.common.message.confirmDelete, _this.title),
                     text: "",
                     type: "warning",
                     showCancelButton: true,
-                    confirmButtonText: "OK",
-                    cancelButtonText: "Cancel",
+                    confirmButtonText: window.resources.common.button.ok,
+                    cancelButtonText: window.resources.common.button.cancel,
                     closeOnConfirm: true,
                     closeOnCancel: true
                 }, function (isConfirm) {
                     if (isConfirm) {
                         //this.common.blockUI({ target: "#list", animate: true });
                         _this.model.delete(item.id, window.token, function (data) {
-                            //if (data === -1) {
-                            //    toastr.warning(this.common.stringFormat(window.resources.common.message.notExist, this.title));
-                            //    return;
-                            //}
-                            //if (data > 0) {
-                            //    toastr.success(this.common.stringFormat(window.resources.common.message.deleteSuccess, this.title));
-                            //}
+                            if (data === -1) {
+                                toastr.warning(_this.common.stringFormat(window.resources.common.message.notExist, _this.title));
+                                return;
+                            }
+                            if (data > 0) {
+                                toastr.success(_this.common.stringFormat(window.resources.common.message.deleteSuccess, _this.title));
+                            }
                         });
                     }
                 });
             };
             this.model = new deparment_model_1.DeparmentModel();
-            //this.listDeparments(listdeparments);
+            this.common = new common_1.Common();
             $(function () {
-                //this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
                 _this.search(1);
             });
-            //this.model = new DepartmentsModel();
-            //$(() => {
-            //    this.common.renderPage(this.title, 1, this.recordPerPage, listSalons.totalRecord, this.pageClickSearch);
-            //    this.listSalons(listSalons.result);
-            //});
         }
         DepartmentViewModel.prototype.formSearch = function () {
             this.search(1);
@@ -80,12 +76,10 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             var _this = this;
             this.currentPage = page;
             this.isSearching(true);
-            this.model.load(1, function (data) {
-                //console.log(data);
+            this.model.load(this.currentPage, function (data) {
                 _this.isSearching(false);
-                _this.listDeparments(data);
-                //console.log(this.listDeparments());
-                //this.common.renderPage(this.title, page, this.recordPerPage, data.totalRecord, this.pageClickSearch);
+                _this.listdeparments(data.listDepartments);
+                _this.common.renderPage(_this.title, page, _this.recordPerPage, data.totalRecord, _this.pageClickSearch);
             });
         };
         DepartmentViewModel.prototype.save = function () {
@@ -121,8 +115,9 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             });
             return;
         };
-        DepartmentViewModel.prototype.pageClickSearch = function (pageclickednumber) {
-            this.search(pageclickednumber);
+        DepartmentViewModel.prototype.pageClickSearch = function (page) {
+            this.formSearch();
+            //this.search(page);
         };
         DepartmentViewModel.prototype.showAdd = function (updateCallback) {
             this.isAdd(true);
@@ -139,6 +134,13 @@ define(["require", "exports", "jquery", "knockout", "toastr", "sweetalert", "../
             this.description("");
             this.address("");
             //setTimeout(() => { this.isFocusName(true); }, 100);
+        };
+        DepartmentViewModel.prototype.renderPage = function (page, totalRecord) {
+            this.totalPage = Math.ceil(totalRecord / this.recordPerPage);
+            var from = (this.currentPage - 1) * this.recordPerPage + 1;
+            var to = (this.currentPage * this.recordPerPage < totalRecord ? this.currentPage * this.recordPerPage : totalRecord);
+            $("#sumarypager").html(totalRecord === 0 ? this.common.stringFormat(window.resources.common.pager.noRecord, this.title) : this.common.stringFormat(window.resources.common.pager.description, from, to, totalRecord, this.title));
+            $("#pager").pager({ pagenumber: page, pagecount: this.totalPage, totalrecords: totalRecord, buttonClickCallback: this.pageClickSearch });
         };
         return DepartmentViewModel;
     }());

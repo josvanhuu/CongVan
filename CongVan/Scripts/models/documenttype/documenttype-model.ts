@@ -32,7 +32,7 @@ export interface IDocumentType {
 }
 
 export interface IInsertDocumentType extends IDocumentType {
-    command: string;
+    //command: string;
     //__RequestVerificationToken: string;
 }
 

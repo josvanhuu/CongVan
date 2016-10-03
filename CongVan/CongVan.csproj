@@ -240,7 +240,6 @@
     <Compile Include="Areas\Admin\Controllers\DocumentController.cs" />
     <Compile Include="Areas\Admin\Controllers\DocumentTypeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Admin\Controllers\MembersController.cs" />
     <Compile Include="Areas\Admin\Controllers\ReportController.cs" />
     <Compile Include="Areas\Admin\Controllers\RolesSettingController.cs" />
     <Compile Include="Areas\Admin\Controllers\SearchDocumentController.cs" />
@@ -423,9 +422,9 @@
     <Content Include="Content\sweetalert\sweet-alert-animations.less" />
     <Content Include="Content\sweetalert\sweet-alert.less" />
     <Content Include="Areas\Admin\Views\DocumentType\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\SearchDocument\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Profile.cshtml" />
     <Content Include="Areas\Admin\Views\Users\ChangePassword.cshtml" />
+    <Content Include="Areas\Admin\Views\Document\Search.cshtml" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
@@ -862,6 +861,10 @@
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\resources\admin\admin.js" />
+    <Content Include="Scripts\resources\admin\admin.vi-VN.js" />
+    <Content Include="Scripts\resources\common.js" />
+    <Content Include="Scripts\resources\common.vi-VN.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\text.js" />
@@ -869,6 +872,9 @@
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\viewmodels\Members.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Navigation\Menu.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -916,6 +922,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\resources\customer\" />
     <Folder Include="Scripts\typings\blueimp-md5\" />
     <Folder Include="Scripts\typings\cldr.js\" />
     <Folder Include="Scripts\typings\jstree\" />
@@ -931,11 +938,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\common\common.ts" />
+    <TypeScriptCompile Include="Scripts\common\validate.ts" />
     <TypeScriptCompile Include="Scripts\config\require-config.ts" />
     <TypeScriptCompile Include="Scripts\models\documenttype\documenttype-model.ts" />
     <TypeScriptCompile Include="Scripts\models\department\deparment-model.ts" />
     <TypeScriptCompile Include="Scripts\models\document\document-model.ts" />
     <TypeScriptCompile Include="Scripts\models\rolesettings\rolesettings-model.ts" />
+    <TypeScriptCompile Include="Scripts\models\user\user-model.ts" />
     <TypeScriptCompile Include="Scripts\typings\amplifyjs\amplifyjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
@@ -971,6 +981,7 @@
     <TypeScriptCompile Include="Scripts\viewmodels\DocumentType\documenttype-viewmodel.ts" />
     <TypeScriptCompile Include="Scripts\viewmodels\Document\document-viewmodel.ts" />
     <TypeScriptCompile Include="Scripts\viewmodels\global-declare.ts" />
+    <TypeScriptCompile Include="Scripts\viewmodels\globalnavi.ts" />
     <TypeScriptCompile Include="Scripts\viewmodels\RolesSetting\rolesettings-viewmodel.ts" />
     <TypeScriptCompile Include="Scripts\viewmodels\User\user-viewmodel.ts" />
   </ItemGroup>
