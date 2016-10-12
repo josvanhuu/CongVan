@@ -54,6 +54,10 @@
       <HintPath>..\packages\Assman.YuiCompressor.2.0.2\lib\Assman.YuiCompressor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EcmaScript.NET.modified, Version=0.1.1.0, Culture=neutral, PublicKeyToken=7d53ba4f537753a5, processorArchitecture=MSIL">
       <HintPath>..\packages\YUICompressor.NET.1.5.0.0\lib\NET35\EcmaScript.NET.modified.dll</HintPath>
       <Private>True</Private>
@@ -109,6 +113,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SQLServerProvider">
       <HintPath>..\..\..\KIDAP\SQLServerProvider\bin\Debug\SQLServerProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Synvata.MsOfficeFileGenerator, Version=0.8.5298.25628, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Synvata.MsOfficeFileGenerator.0.8.5298.25628\lib\net45\Synvata.MsOfficeFileGenerator.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -240,9 +248,9 @@
     <Compile Include="Areas\Admin\Controllers\DocumentController.cs" />
     <Compile Include="Areas\Admin\Controllers\DocumentTypeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrganizationsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ReportController.cs" />
     <Compile Include="Areas\Admin\Controllers\RolesSettingController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SearchDocumentController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Areas\Admin\Models\DepartmentsModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -254,6 +262,8 @@
     <Compile Include="Entities\Departments.cs" />
     <Compile Include="Entities\Document.cs" />
     <Compile Include="Entities\DocumentType.cs" />
+    <Compile Include="Entities\ExportDocument.cs" />
+    <Compile Include="Entities\Oranization.cs" />
     <Compile Include="Entities\RolesSetting.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Global.asax.cs">
@@ -277,7 +287,10 @@
     <Content Include="assets\css\bootstrap-duallistbox.min.css" />
     <Content Include="assets\css\bootstrap-editable.min.css" />
     <Content Include="assets\css\bootstrap-multiselect.min.css" />
+    <Content Include="assets\css\bootstrap-theme.css" />
+    <Content Include="assets\css\bootstrap-theme.min.css" />
     <Content Include="assets\css\bootstrap-timepicker.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\chosen.min.css" />
     <Content Include="assets\css\colorbox.min.css" />
@@ -302,6 +315,7 @@
     <Content Include="assets\images\avatars\avatar3.png" />
     <Content Include="assets\images\avatars\avatar4.png" />
     <Content Include="assets\images\avatars\avatar5.png" />
+    <Content Include="assets\images\avatars\gangster_64.ico" />
     <Content Include="assets\images\avatars\profile-pic.jpg" />
     <Content Include="assets\images\avatars\user.jpg" />
     <Content Include="assets\images\email\email1.png" />
@@ -336,6 +350,7 @@
     <Content Include="assets\js\bootstrap-tag.min.js" />
     <Content Include="assets\js\bootstrap-timepicker.min.js" />
     <Content Include="assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\buttons.colVis.min.js" />
     <Content Include="assets\js\buttons.flash.min.js" />
@@ -380,6 +395,7 @@
     <Content Include="assets\js\jquery.validate.min.js" />
     <Content Include="assets\js\markdown.min.js" />
     <Content Include="assets\js\moment.min.js" />
+    <Content Include="assets\js\npm.js" />
     <Content Include="assets\js\prettify.min.js" />
     <Content Include="assets\js\respond.min.js" />
     <Content Include="assets\js\select2.min.js" />
@@ -390,6 +406,10 @@
     <Content Include="assets\swf\flashExport.swf" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\icon\icon_Department.png" />
+    <Content Include="Content\icon\icon_vector_65_16.png" />
+    <Content Include="Content\icon\logo1_physician.png" />
+    <Content Include="Content\icon\logo2_aiga_first_aid_bg.png" />
     <Content Include="Content\infragistics\extend.js" />
     <Content Include="Content\infragistics\infragistics.core.js" />
     <Content Include="Content\infragistics\infragistics.css" />
@@ -406,13 +426,21 @@
     <Content Include="Content\sweetalert\thumbs-up.jpg" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="assets\uploadfile\css\style.css" />
+    <Content Include="assets\uploadfile\img\border-image.png" />
+    <Content Include="assets\uploadfile\img\icons.png" />
+    <Content Include="assets\uploadfile\js\jquery.fileupload.js" />
+    <Content Include="assets\uploadfile\js\jquery.iframe-transport.js" />
+    <Content Include="assets\uploadfile\js\jquery.knob.js" />
+    <Content Include="assets\uploadfile\js\jquery.ui.widget.js" />
+    <Content Include="assets\uploadfile\js\script.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="Areas\Admin\Views\Document\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Document\Index123.cshtml" />
     <Content Include="Areas\Admin\Views\Report\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_EmptyLayout.cshtml" />
@@ -425,6 +453,12 @@
     <Content Include="Areas\Admin\Views\Users\Profile.cshtml" />
     <Content Include="Areas\Admin\Views\Users\ChangePassword.cshtml" />
     <Content Include="Areas\Admin\Views\Document\Search.cshtml" />
+    <Content Include="assets\css\bootstrap-theme.css.map" />
+    <Content Include="assets\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\css\bootstrap.min.css.map" />
+    <Content Include="Areas\Admin\Views\Document\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Organizations\Index.cshtml" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
@@ -456,6 +490,9 @@
     <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
     <Content Include="Areas\Admin\Views\RolesSetting\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\common\common.js" />
+    <Content Include="Scripts\common\validate.js" />
+    <Content Include="Scripts\config\require-config.js" />
     <Content Include="Scripts\globalize.0.1.3\cultures\globalize.culture.af-ZA.js" />
     <Content Include="Scripts\globalize.0.1.3\cultures\globalize.culture.af.js" />
     <Content Include="Scripts\globalize.0.1.3\cultures\globalize.culture.am-ET.js" />
@@ -833,6 +870,13 @@
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\MIT-LICENSE.txt" />
+    <Content Include="Scripts\models\department\deparment-model.js" />
+    <Content Include="Scripts\models\documenttype\documenttype-model.js" />
+    <Content Include="Scripts\models\document\document-model.js" />
+    <Content Include="Scripts\models\global-index-model.js" />
+    <Content Include="Scripts\models\organization\organization-model.js" />
+    <Content Include="Scripts\models\rolesettings\rolesettings-model.js" />
+    <Content Include="Scripts\models\user\user-model.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment-with-locales.js" />
     <Content Include="Scripts\moment-with-locales.min.js" />
@@ -840,6 +884,7 @@
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\plugins\blueimp-md5\md5.js" />
     <Content Include="Scripts\plugins\blueimp-md5\md5.min.js" />
+    <Content Include="Scripts\plugins\dropzone\dropzone-amd-module.js" />
     <Content Include="Scripts\plugins\requirejs-plugins\async.js" />
     <Content Include="Scripts\plugins\requirejs-plugins\depend.js" />
     <Content Include="Scripts\plugins\requirejs-plugins\font.js" />
@@ -870,11 +915,19 @@
     <Content Include="Scripts\text.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\viewmodels\Departments\departments-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\DocumentType\documenttype-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\Document\document-search-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\Document\document-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\global-declare.js" />
+    <Content Include="Scripts\viewmodels\global-index-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\global-navi.js" />
+    <Content Include="Scripts\viewmodels\globalnavi.js" />
     <Content Include="Scripts\viewmodels\Members.js" />
+    <Content Include="Scripts\viewmodels\Organization\organization-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\RolesSetting\rolesettings-viewmodel.js" />
+    <Content Include="Scripts\viewmodels\User\user-viewmodel.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Navigation\Menu.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -914,7 +967,6 @@
     <Content Include="Views\Shared\_EmptyLayout.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\UserManagement.cshtml" />
-    <Content Include="Views\Navigation\SubMenuNavigation.cshtml" />
     <Content Include="Views\Navigation\TopNavigation.cshtml" />
     <Content Include="Views\Shared\_SubMenu.cshtml" />
     <Content Include="tsconfig.json" />
@@ -923,10 +975,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\resources\customer\" />
-    <Folder Include="Scripts\typings\blueimp-md5\" />
-    <Folder Include="Scripts\typings\cldr.js\" />
-    <Folder Include="Scripts\typings\jstree\" />
-    <Folder Include="Scripts\typings\proview-editor\" />
     <Folder Include="Views\BaseNavigation\" />
   </ItemGroup>
   <ItemGroup>
@@ -936,54 +984,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\common\common.ts" />
-    <TypeScriptCompile Include="Scripts\common\validate.ts" />
-    <TypeScriptCompile Include="Scripts\config\require-config.ts" />
-    <TypeScriptCompile Include="Scripts\models\documenttype\documenttype-model.ts" />
-    <TypeScriptCompile Include="Scripts\models\department\deparment-model.ts" />
-    <TypeScriptCompile Include="Scripts\models\document\document-model.ts" />
-    <TypeScriptCompile Include="Scripts\models\rolesettings\rolesettings-model.ts" />
-    <TypeScriptCompile Include="Scripts\models\user\user-model.ts" />
-    <TypeScriptCompile Include="Scripts\typings\amplifyjs\amplifyjs.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\bootstrap.v3.datetimepicker\bootstrap.v3.datetimepicker.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\dropzone\dropzone.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\global-declare\global-declare.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\globalize\globalize-0.1.3.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\globalize\globalize.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery-validation-unobtrusive\jquery-validation-unobtrusive.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.blockUI\jquery.blockUI.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.cookie\jquery.cookie.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.pager\jquery.pager.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.validation\jquery.validation.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jqueryui\jqueryui.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\knockout.mapping\knockout.mapping.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\knockout\tests\jasmine.extensions.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\lodash\lodash.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\resources\resources.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\sweetalert\sweetalert.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\toastr\toastr.d.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\Departments\departments-viewmodel.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\DocumentType\documenttype-viewmodel.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\Document\document-viewmodel.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\global-declare.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\globalnavi.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\RolesSetting\rolesettings-viewmodel.ts" />
-    <TypeScriptCompile Include="Scripts\viewmodels\User\user-viewmodel.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

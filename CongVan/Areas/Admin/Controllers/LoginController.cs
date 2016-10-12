@@ -30,6 +30,11 @@ namespace CongVan.Areas.Admin.Controllers
                 IUser user = userStore.ValidateUser(username, password);
                 if (user == null) return Redirect("/Admin/Login");
 
+                //Kids.Kid.Authentication.GetAuthenticatedUser() --- Get user for Cookies
+
+                //var UserName = user.UserName;
+                //var FullName = user.FullName;
+
                 Kids.Kid.Authentication.SignIn(user, true);
                 if (Request.UrlReferrer.ToString().ToLower().Contains("returnurl"))
                 {
@@ -38,14 +43,14 @@ namespace CongVan.Areas.Admin.Controllers
                     if (action.Trim() != string.Empty)
                         return Redirect(action);
                     else
-                        return RedirectToAction("Admin/Document/Search");
+                        return RedirectToAction("/Admin/Document?type=0");
                 }
-                return RedirectToAction("Index");
+                return Redirect("/Admin/Document?type=0");
             }
             else if (command == "logout")
             {
                 Kids.Kid.Authentication.SignOut();
-                return Redirect("Admin/Login");
+                return Redirect("/Admin/Login");
             }
 
             return View("Index");

@@ -4,8 +4,7 @@
 require.config({
     baseUrl: "/Scripts",
     paths: {
-        //jquery: "jquery-3.1.0.min",
-        jquery: "../assets/js/jquery-1.11.3.min",
+        jquery: "jquery-3.1.0.min",
         jqueryValidate: "jquery.validate.min",
         jqueryValidateUnobtrusive: "jquery.validate.unobtrusive.min",
         jqueryCookie: "jquery.cookie-1.4.1.min",
@@ -30,11 +29,15 @@ require.config({
         wysiwyg: "plugins/wysiwyg/src/wysiwyg",
         wysiwygEditor: "plugins/wysiwyg/src/wysiwyg-editor",
         sweetalert: "plugins/sweetalert/sweetalert.min",
+        widget: "../assets/uploadfile/js/jquery.ui.widget",
+        knob: "../assets/uploadfile/js/jquery.knob",
+        iframtransport: "../assets/uploadfile/js/jquery.iframe-transport",
+        fileupload: "../assets/uploadfile/js/jquery.fileupload",
+        scriptupload: "../assets/uploadfile/js/script",
         globalize: "globalize.0.1.3/cultures/globalize.culture." + window.currentCulture,
         resourceCommon: "resources/common.vi-VN",
         //resourceAdmin: `resources/admin/admin${window.currentCulture === "en-US" ? "" : `.${window.currentCulture}`}`,
-        validate: "common/validate",
-        dropzone: "../assets/js/dropzone.min"
+        validate: "common/validate"        
     },
     shim: {
         bootstrap: ["jquery"],
@@ -49,6 +52,7 @@ require.config({
         aceElement: ["jquery"],
         ace: ["jquery", "bootstrap", "aceExtra", "aceElement"],
         globalize: ["globalizeCore"],
+        maskedinput: ["jqueryuicustom", "bootstrap", "bootstrapDatetimepicker", "bootstrapdatepicker", "bootstraptimepicker", "daterangepicker", "bootstrapcolorpicker", "chosenjquery", "spinbox", "knob", "autosize", "inputlimiter"],
+        //scriptupload: ["knob", "widget", "fileupload", "iframtransport"]
     }
 });
-//# sourceMappingURL=require-config.js.map

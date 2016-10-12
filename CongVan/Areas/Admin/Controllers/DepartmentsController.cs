@@ -9,14 +9,18 @@ using System.Web.Configuration;
 using System.Web.Mvc;
 using System.IO;
 using Newtonsoft.Json;
+using Kids.Admin;
 
 namespace CongVan.Areas.Admin.Controllers
 {
-    public class DepartmentsController : Controller
+    public class DepartmentsController : AuthenticateController
     {
         // GET: Admin/Departments
         public ActionResult Index()
         {
+            var listDepartments = Kids.Kid.DBContext.FetchAll<Departments>().ToList();
+            ViewBag.count = listDepartments.Count();
+            ViewBag.listDepartments = listDepartments.Skip(0).Take(int.Parse(WebConfigurationManager.AppSettings["pagesize"])).ToJSON();
             return View();
         }
         [HttpPost]

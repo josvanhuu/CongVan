@@ -1,4 +1,5 @@
 ﻿using CongVan.Entities;
+using Kids.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Web.Mvc;
 
 namespace CongVan.Areas.Admin.Controllers
 {
-    public class DocumentTypeController : Controller
+    public class DocumentTypeController : AuthenticateController
     {
         // GET: Admin/DocumentSettings
         public ActionResult Index()
@@ -62,7 +63,7 @@ namespace CongVan.Areas.Admin.Controllers
         {
             var documenttype = new DocumentType();
 
-            var listDocumentByType = Kids.Kid.DBContext.FetchAll<Document>().Where(x => x.DocumentType == eid).ToList();
+            var listDocumentByType = Kids.Kid.DBContext.FetchAll<DocumentFolder>().Where(x => x.DocumentType == eid).ToList();
             if (listDocumentByType.Any())
             {
                 return Json(0, JsonRequestBehavior.AllowGet);

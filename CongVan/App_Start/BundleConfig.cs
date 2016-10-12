@@ -56,6 +56,17 @@ namespace CongVan
 
             bundles.Add(new ScriptBundle("~/bundles/require").Include(
                         "~/Scripts/require.js"));
+
+            bundles.Add(new StyleBundle("~/documentsearch/css").Include(
+                 "~/assets/css/jquery-ui.custom.min.css",
+                 "~/assets/css/chosen.min.css",
+                 "~/assets/css/bootstrap-datepicker3.min.css",
+                 "~/assets/css/bootstrap-timepicker.min.css",
+                 "~/assets/css/daterangepicker.min.css",
+                 "~/assets/css/bootstrap-datetimepicker.min.css",
+                 "~/assets/css/bootstrap-colorpicker.min.css"
+                 ));
+
         }
     }
 }

@@ -21,6 +21,7 @@
     </script>
     <script type="text/javascript">
         var naviactive = "user";
+        var listuser = @Html.Raw(ViewBag.listUsers);
         var listdeparments = @Html.Raw(ViewBag.listDeparments);
         require(["viewmodels/User/user-viewmodel", "jqueryValidate"]);
     </script>
@@ -123,7 +124,7 @@
                             </div>
                             <div class="space-4"></div>
 
-                            <div class="form-group" data-bind="visible: !isAdd">
+                            <div class="form-group" data-bind="visible: isAdd">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Password </label>
                                 <div class="col-sm-9">
                                     <input type="password" data-bind="value: password, enable: isAdd" class="form-control" />

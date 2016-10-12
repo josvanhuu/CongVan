@@ -1,4 +1,6 @@
 ﻿using CongVan.Entities;
+using Kids.Admin;
+using Kids.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +10,12 @@ using System.Web.Mvc;
 
 namespace CongVan.Areas.Admin.Controllers
 {
-    public class RolesSettingController : Controller
+    public class RolesSettingController : AuthenticateController
     {
         // GET: Admin/RolesSetting
         public ActionResult Index()
         {
+            ViewBag.listRolesSetting = Kids.Kid.DBContext.FetchAll<RolesSetting>().ToJSON();
             return View();
         }
         [HttpPost]

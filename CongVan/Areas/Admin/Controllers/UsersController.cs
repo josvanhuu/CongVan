@@ -1,4 +1,5 @@
 ﻿using CongVan.Entities;
+using Kids.Admin;
 using Kids.Helpers;
 using Kids.User.Identity;
 using System;
@@ -11,20 +12,13 @@ using System.Web.Mvc;
 
 namespace CongVan.Areas.Admin.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : AuthenticateController
     {
         // GET: Admin/Users
         public ActionResult Index()
         {
-            //var user = new KidUser() { UserName = "kim" };
-            //var userStore = new TUserStore<KidUser>();
-            //await userStore.SetPasswordHashAsync(user, "abc@123");
-            //await userStore.CreateAsync(user);
-            //if (!IsAuthenticated)
-            //    return View("Admin/Index");
-
             ViewBag.listDeparments = Kids.Kid.DBContext.FetchAll<Departments>().Select(item => new { id = item.EID, name = item.Name }).ToJSON();
-
+            ViewBag.listUsers = Kids.Kid.DBContext.FetchAll<User>().ToJSON();
             return View();
         }
 
@@ -94,6 +88,11 @@ namespace CongVan.Areas.Admin.Controllers
         public ActionResult ChangePassword()
         {
             return View();
+        }
+        public ActionResult Logout()
+        {
+            Kids.Kid.Authentication.SignOut();
+            return Redirect("/Admin/Login/Index");
         }
     }
 }

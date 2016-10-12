@@ -488,3 +488,5 @@ C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\Microsoft.Build.Utili
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\vi-VN\Resource.resources.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\obj\Debug\CongVan.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\obj\Debug\CongVan.pdb
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\Synvata.MsOfficeFileGenerator.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\DocumentFormat.OpenXml.dll

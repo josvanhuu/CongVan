@@ -11,3 +11,4 @@ C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.cspro
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\vi-VN\Resource.resources.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.pdb
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Debug\Resource.csprojResolveAssemblyReference.cache

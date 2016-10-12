@@ -6,7 +6,7 @@
 @section scripts {
     <script type="text/template" id="deparmentTemplate">
         <tr>
-            <td class="text-center" data-bind="text: $index()+1"></td>
+            <td class="text-center" data-bind="text: (($parent.recordPerPage * $parent.currentPage) - $parent.recordPerPage) + $index() + 1"></td>
             <td class="text-center" data-bind="text: Code"></td>
             <td data-bind="text: Name"></td>
             <td data-bind="text: Email"></td>
@@ -20,7 +20,9 @@
     </script>
     <script type="text/javascript">
         var naviactive = "departments";
-        require(["viewmodels/Departments/departments-viewmodel", "jqueryValidate"]);
+        var listdeparments = @Html.Raw(ViewBag.listDepartments);
+        var countitem = @ViewBag.count;
+        require(["jqueryPager","viewmodels/Departments/departments-viewmodel", "jqueryValidate"]);
     </script>
 }
 <div class="main-content-inner">
@@ -38,7 +40,7 @@
         </ul>
     </div>
 
-    <div class="page-content" id="page-content">
+    <div class="page-content">
         <div class="page-header">
             <div class="clearfix">
                 <div class="pull-left">
