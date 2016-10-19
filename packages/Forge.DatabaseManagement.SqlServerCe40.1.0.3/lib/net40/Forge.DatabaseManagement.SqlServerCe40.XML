@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Forge.DatabaseManagement.SqlServerCe40</name>
+    </assembly>
+    <members>
+        <member name="T:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Dialect">
+            <summary>
+            Represents a specialized NHibernate SQL Server CE 4.0 dialect
+            </summary>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Dialect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Dialect"/> class.
+            </summary>
+        </member>
+        <member name="T:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager">
+            <summary>
+            Represents a database manager which ensure the underlying database integrity is valid.
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.DIALECT">
+            <summary>
+            Dialec key
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.DIALECT_EXPECTED_VALUE_BUILTIN">
+            <summary>
+            Dialect builtin value
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.DIALECT_EXPECTED_VALUE_CUSTOM">
+            <summary>
+            Dialect custom value
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.CONNECTION_DRIVER">
+            <summary>
+            Connection driver key
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.CONNECTION_DRIVER_EXPECTED_VALUE">
+            <summary>
+            Connection driver value
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.CONNECTION_STRING">
+            <summary>
+            Connection string key
+            </summary>
+        </member>
+        <member name="F:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.CONNECTION_STRING_NAME">
+            <summary>
+            Connection string name key
+            </summary>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager"/> class.
+            </summary>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="P:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.IsInitialized">
+            <summary>
+            Gets a value indicating whether this instance is initialized.
+            </summary>
+            <value>
+            <c>true</c> if this instance is initialized; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.Initialize(Forge.Configuration.Shared.CategoryPropertyItem)">
+            <summary>
+            Initializes the specified config item.
+            </summary>
+            <param name="configItem">The config item.</param>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.EnsureDatabaseIntegrity(System.Int64,System.Collections.Generic.Dictionary{System.String,System.String},Forge.DatabaseManagement.SchemaFactoryModeEnum)">
+            <summary>
+            Ensures the database integrity.
+            </summary>
+            <param name="systemId">The system id.</param>
+            <param name="descriptor">The descriptor.</param>
+            <param name="mode">The mode.</param>
+            <exception cref="T:Forge.DatabaseManagement.UnexpectedNHibernateConfigurationException">
+            Unexpected dialect.
+            or
+            Unexpected connection driver.
+            </exception>
+            <exception cref="T:Forge.Configuration.Shared.InvalidConfigurationException">
+            Unable to find connection information in NHibernate Descriptor settings.
+            or
+            Unable to find data source in connection string.
+            </exception>
+            <exception cref="T:Forge.DatabaseManagement.DatabaseVerificationErrorException"></exception>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.GetDatabaseFile(System.String)">
+            <summary>
+            Gets the database file.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Forge.DatabaseManagement.SqlServerCe40.SqlServerCe40Manager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="dispose"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+    </members>
+</doc>

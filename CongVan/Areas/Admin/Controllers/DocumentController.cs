@@ -236,7 +236,7 @@ namespace CongVan.Areas.Admin.Controllers
                     exDoc.Add(new ExportDocument() { FullName = "test2", Description = "z-a" });
 
 
-                    return new FileStreamResult(Kids.Kid.Service<IExportService<ExportDocument>>().Export(ExportType.Excel, "text.xls", exDoc, outStream)
+                    return new FileStreamResult(Kids.Kid.Service<IExportService<ExportDocument>>().Export(ExportType.Excel, "text.xls", exDoc)
                         , "application/vnd.ms-excel")
                     { FileDownloadName = "test.xls" };
 

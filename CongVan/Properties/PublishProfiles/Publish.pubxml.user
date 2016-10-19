@@ -1,0 +1,2422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\ProjectPlus\HQsoft\CongVan\Published</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>08/30/2016 20:26:51</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Departments/Index.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Document/Index.cshtml">
+      <publishTime>10/12/2016 21:47:14</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Document/Index123.cshtml">
+      <publishTime>06/10/2016 17:09:27</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Document/Search.cshtml">
+      <publishTime>10/12/2016 17:19:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DocumentType/Index.cshtml">
+      <publishTime>03/10/2016 16:40:39</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Login/Index.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Members/Index.cshtml">
+      <publishTime>09/27/2016 02:02:22</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Organizations/Index.cshtml">
+      <publishTime>08/10/2016 16:59:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Report/Index.cshtml">
+      <publishTime>03/10/2016 16:43:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/RolesSetting/Index.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_EmptyLayout.cshtml">
+      <publishTime>09/21/2016 22:26:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/ChangePassword.cshtml">
+      <publishTime>09/28/2016 21:06:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/Index.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/Profile.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/web.config">
+      <publishTime>09/15/2016 08:47:22</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/_ViewStart.cshtml">
+      <publishTime>09/15/2016 08:53:13</publishTime>
+    </File>
+    <File Include="assets/css/ace-ie.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/ace-part2.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/ace-rtl.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/ace-skins.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/ace.min.css">
+      <publishTime>09/15/2016 23:49:16</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-colorpicker.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-datepicker3.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-datetimepicker.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-duallistbox.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-editable.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-multiselect.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.css">
+      <publishTime>05/10/2016 11:20:10</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.css.map">
+      <publishTime>05/10/2016 11:20:10</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.min.css">
+      <publishTime>05/10/2016 11:20:10</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.min.css.map">
+      <publishTime>05/10/2016 11:20:10</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-timepicker.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.css">
+      <publishTime>05/10/2016 11:20:08</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.css.map">
+      <publishTime>05/10/2016 11:20:08</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.min.css">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.min.css.map">
+      <publishTime>05/10/2016 11:20:10</publishTime>
+    </File>
+    <File Include="assets/css/chosen.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/colorbox.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/daterangepicker.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/dropzone.css">
+      <publishTime>09/28/2016 01:19:53</publishTime>
+    </File>
+    <File Include="assets/css/dropzone.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/font-awesome.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/fonts.googleapis.com.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/fullcalendar.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/jquery-ui.custom.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/jquery-ui.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/jquery.gritter.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/prettify.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/select2.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/css/ui.jqgrid.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/font-awesome/4.5.0/css/font-awesome.min.css">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/font-awesome/4.5.0/fonts/fontawesome-webfont.eot">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/font-awesome/4.5.0/fonts/fontawesome-webfont.svg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/avatar.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/avatar1.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/avatar2.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/avatar3.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/avatar4.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/avatar5.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/gangster_64.ico">
+      <publishTime>04/10/2016 17:46:43</publishTime>
+    </File>
+    <File Include="assets/images/avatars/profile-pic.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/avatars/user.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/email/email1.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/email/email2.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/email/email3.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/email/email4.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/gallery/thumb-1.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/gallery/thumb-2.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/gallery/thumb-3.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/gallery/thumb-4.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/gallery/thumb-5.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/gallery/thumb-6.jpg">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/logo/logo-hospital-hi.png">
+      <publishTime>09/27/2016 23:45:53</publishTime>
+    </File>
+    <File Include="assets/images/logo/logo-proview.png">
+      <publishTime>06/09/2016 22:44:43</publishTime>
+    </File>
+    <File Include="assets/images/logo/Logo.png">
+      <publishTime>06/09/2016 22:42:12</publishTime>
+    </File>
+    <File Include="assets/images/placeholder/165x90.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/placeholder/255x150.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/placeholder/530x270.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/images/placeholder/550x280.png">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/js/ace-editable.min.js">
+      <publishTime>06/09/2016 20:55:21</publishTime>
+    </File>
+    <File Include="assets/js/ace-elements.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/ace-extra.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/ace.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/autosize.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootbox.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-colorpicker.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-datepicker.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-datetimepicker.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-editable.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-markdown.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-multiselect.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-tag.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-timepicker.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-wysiwyg.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap.js">
+      <publishTime>05/10/2016 11:19:50</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap.min.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="assets/js/buttons.colVis.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/buttons.flash.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/buttons.html5.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/buttons.print.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/chosen.jquery.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/dataTables.buttons.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/dataTables.select.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/daterangepicker.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/dropzone.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="assets/js/dropzone.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/excanvas.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/fullcalendar.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/grid.locale-en.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/holder.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/html5shiv.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery-1.11.3.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery-2.1.4.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery-additional-methods.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery-typeahead.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery-ui.custom.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery-ui.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.bootstrap-duallistbox.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.colorbox.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.dataTables.bootstrap.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.dataTables.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.easypiechart.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.flot.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.flot.pie.min.js">
+      <publishTime>06/09/2016 20:55:22</publishTime>
+    </File>
+    <File Include="assets/js/jquery.flot.resize.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.gritter.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.hotkeys.index.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.inputlimiter.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.jqGrid.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.knob.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.maskedinput.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.mobile.custom.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.nestable.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.raty.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.sparkline.index.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.ui.touch-punch.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/jquery.validate.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/markdown.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/moment.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/npm.js">
+      <publishTime>05/10/2016 11:19:52</publishTime>
+    </File>
+    <File Include="assets/js/prettify.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/respond.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/select2.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/spin.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/spinbox.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/tree.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/js/wizard.min.js">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/swf/flashExport.swf">
+      <publishTime>06/09/2016 20:55:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/css/style.css">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/img/border-image.png">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/img/icons.png">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/js/jquery.fileupload.js">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/js/jquery.iframe-transport.js">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/js/jquery.knob.js">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/js/jquery.ui.widget.js">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="assets/uploadfile/js/script.js">
+      <publishTime>09/10/2016 00:01:23</publishTime>
+    </File>
+    <File Include="Assman.config">
+      <publishTime>08/30/2016 21:36:44</publishTime>
+    </File>
+    <File Include="bin/amd64/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest">
+      <publishTime>10/12/2016 22:23:59</publishTime>
+    </File>
+    <File Include="bin/amd64/Microsoft.VC90.CRT/msvcr90.dll">
+      <publishTime>10/12/2016 22:24:00</publishTime>
+    </File>
+    <File Include="bin/amd64/Microsoft.VC90.CRT/README_ENU.txt">
+      <publishTime>10/12/2016 22:24:01</publishTime>
+    </File>
+    <File Include="bin/amd64/sqlceca40.dll">
+      <publishTime>10/12/2016 22:24:01</publishTime>
+    </File>
+    <File Include="bin/amd64/sqlcecompact40.dll">
+      <publishTime>10/12/2016 22:24:02</publishTime>
+    </File>
+    <File Include="bin/amd64/sqlceer40EN.dll">
+      <publishTime>10/12/2016 22:24:02</publishTime>
+    </File>
+    <File Include="bin/amd64/sqlceme40.dll">
+      <publishTime>10/12/2016 22:24:02</publishTime>
+    </File>
+    <File Include="bin/amd64/sqlceqp40.dll">
+      <publishTime>10/12/2016 22:24:03</publishTime>
+    </File>
+    <File Include="bin/amd64/sqlcese40.dll">
+      <publishTime>10/12/2016 22:24:03</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>08/30/2016 20:26:51</publishTime>
+    </File>
+    <File Include="bin/Assman.dll">
+      <publishTime>10/24/2013 17:32:12</publishTime>
+    </File>
+    <File Include="bin/Assman.YuiCompressor.dll">
+      <publishTime>10/24/2013 17:32:18</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>05/16/2016 06:34:54</publishTime>
+    </File>
+    <File Include="bin/CongVan.dll">
+      <publishTime>10/13/2016 23:34:57</publishTime>
+    </File>
+    <File Include="bin/CongVan.pdb">
+      <publishTime>10/12/2016 22:25:08</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>04/08/2013 13:21:24</publishTime>
+    </File>
+    <File Include="bin/EcmaScript.NET.modified.dll">
+      <publishTime>12/01/2011 13:42:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/03/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>02/03/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServerCompact.dll">
+      <publishTime>03/02/2015 09:32:22</publishTime>
+    </File>
+    <File Include="bin/Kid.Providers.dll">
+      <publishTime>10/05/2016 00:50:20</publishTime>
+    </File>
+    <File Include="bin/Kid.Providers.pdb">
+      <publishTime>10/12/2016 13:02:51</publishTime>
+    </File>
+    <File Include="bin/Kid.Utils.dll">
+      <publishTime>10/05/2016 00:50:04</publishTime>
+    </File>
+    <File Include="bin/Kid.Utils.pdb">
+      <publishTime>10/12/2016 13:02:51</publishTime>
+    </File>
+    <File Include="bin/Kids.dll">
+      <publishTime>10/13/2016 23:34:51</publishTime>
+    </File>
+    <File Include="bin/Kids.Entities.dll">
+      <publishTime>10/05/2016 00:52:30</publishTime>
+    </File>
+    <File Include="bin/Kids.Entities.pdb">
+      <publishTime>10/12/2016 13:02:51</publishTime>
+    </File>
+    <File Include="bin/Kids.MircosoftEntityFrameWork.dll">
+      <publishTime>10/13/2016 23:02:51</publishTime>
+    </File>
+    <File Include="bin/Kids.MircosoftEntityFrameWork.pdb">
+      <publishTime>10/12/2016 14:15:00</publishTime>
+    </File>
+    <File Include="bin/Kids.pdb">
+      <publishTime>10/12/2016 14:15:01</publishTime>
+    </File>
+    <File Include="bin/Kids.Repositories.dll">
+      <publishTime>10/05/2016 00:57:49</publishTime>
+    </File>
+    <File Include="bin/Kids.Repositories.pdb">
+      <publishTime>10/12/2016 13:02:51</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>12/10/2015 16:55:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>06/06/2016 15:40:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>06/06/2016 10:45:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>06/06/2016 10:42:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>03/04/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>03/04/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>03/04/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Utilities.v3.5.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>02/13/2015 13:16:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>02/13/2015 13:16:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Hosting.dll">
+      <publishTime>07/11/2013 15:22:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>02/13/2015 13:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>02/13/2015 13:16:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>02/13/2015 13:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>02/13/2015 13:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>02/13/2015 13:16:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>02/13/2015 13:16:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>02/13/2015 13:16:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/16/2016 06:35:02</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/13/2012 12:19:34</publishTime>
+    </File>
+    <File Include="bin/Resource.dll">
+      <publishTime>10/13/2016 23:02:52</publishTime>
+    </File>
+    <File Include="bin/Resource.pdb">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/SQLServerProvider.dll">
+      <publishTime>10/05/2016 00:52:33</publishTime>
+    </File>
+    <File Include="bin/Synvata.MsOfficeFileGenerator.dll">
+      <publishTime>04/07/2014 14:14:32</publishTime>
+    </File>
+    <File Include="bin/System.Data.SqlServerCe.dll">
+      <publishTime>08/08/2012 18:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 04:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 04:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>01/28/2015 04:03:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 04:03:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>11/02/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/vi-VN/Resource.resources.dll">
+      <publishTime>10/13/2016 23:02:52</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/17/2013 17:03:52</publishTime>
+    </File>
+    <File Include="bin/x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest">
+      <publishTime>10/12/2016 22:24:04</publishTime>
+    </File>
+    <File Include="bin/x86/Microsoft.VC90.CRT/msvcr90.dll">
+      <publishTime>10/12/2016 22:24:05</publishTime>
+    </File>
+    <File Include="bin/x86/Microsoft.VC90.CRT/README_ENU.txt">
+      <publishTime>10/12/2016 22:24:05</publishTime>
+    </File>
+    <File Include="bin/x86/sqlceca40.dll">
+      <publishTime>10/12/2016 22:24:05</publishTime>
+    </File>
+    <File Include="bin/x86/sqlcecompact40.dll">
+      <publishTime>10/12/2016 22:24:06</publishTime>
+    </File>
+    <File Include="bin/x86/sqlceer40EN.dll">
+      <publishTime>10/12/2016 22:24:06</publishTime>
+    </File>
+    <File Include="bin/x86/sqlceme40.dll">
+      <publishTime>10/12/2016 22:24:07</publishTime>
+    </File>
+    <File Include="bin/x86/sqlceqp40.dll">
+      <publishTime>10/12/2016 22:24:07</publishTime>
+    </File>
+    <File Include="bin/x86/sqlcese40.dll">
+      <publishTime>10/12/2016 22:24:08</publishTime>
+    </File>
+    <File Include="bin/Yahoo.Yui.Compressor.dll">
+      <publishTime>12/01/2011 13:42:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="Content/icon/icon_Department.png">
+      <publishTime>08/10/2016 17:10:30</publishTime>
+    </File>
+    <File Include="Content/icon/icon_vector_65_16.png">
+      <publishTime>08/10/2016 17:04:37</publishTime>
+    </File>
+    <File Include="Content/icon/logo1_physician.png">
+      <publishTime>10/10/2016 09:12:26</publishTime>
+    </File>
+    <File Include="Content/icon/logo2_aiga_first_aid_bg.png">
+      <publishTime>10/10/2016 09:12:26</publishTime>
+    </File>
+    <File Include="Content/infragistics/extend.js">
+      <publishTime>09/28/2016 14:03:30</publishTime>
+    </File>
+    <File Include="Content/infragistics/infragistics.core.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/infragistics/infragistics.css">
+      <publishTime>09/28/2016 11:49:33</publishTime>
+    </File>
+    <File Include="Content/infragistics/infragistics.lob.js">
+      <publishTime>09/28/2016 11:51:45</publishTime>
+    </File>
+    <File Include="Content/infragistics/infragistics.theme.css">
+      <publishTime>09/28/2016 11:49:14</publishTime>
+    </File>
+    <File Include="Content/infragistics/jquery-1.9.1.min.js">
+      <publishTime>09/28/2016 12:47:30</publishTime>
+    </File>
+    <File Include="Content/infragistics/jquery-ui.min.js">
+      <publishTime>09/28/2016 12:45:07</publishTime>
+    </File>
+    <File Include="Content/infragistics/modernizr-2.8.3.js">
+      <publishTime>09/28/2016 11:49:47</publishTime>
+    </File>
+    <File Include="Content/navigation.xml">
+      <publishTime>09/13/2016 11:05:52</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="Content/sweetalert/bootstrap-sweetalert.png">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/docs.css">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/sweet-alert-animations.less">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/sweet-alert-combine.less">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/sweet-alert.css">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/sweet-alert.less">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/sweetalert.css">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/sweetalert/thumbs-up.jpg">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/toastr.css">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/toastr.less">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/toastr.min.css">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="Content/toastr.scss">
+      <publishTime>09/27/2016 13:47:32</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/12/2016 23:06:05</publishTime>
+    </File>
+    <File Include="Scripts - Copy/common/common.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/common/validate.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/config/require-config.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/models/department/deparment-model.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/models/document/document-model.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/models/documenttype/documenttype-model.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/models/rolesettings/rolesettings-model.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/models/user/user-model.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/Document/document-search-viewmodel.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/Document/document-viewmodel.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/DocumentType/documenttype-viewmodel.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/global-declare.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/global-index-viewmodel.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/globalnavi.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/RolesSetting/rolesettings-viewmodel.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts - Copy/viewmodels/User/user-viewmodel.js">
+      <publishTime>10/13/2016 23:34:53</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.22.19-build00125.js">
+      <publishTime>08/30/2016 20:26:52</publishTime>
+    </File>
+    <File Include="Scripts/ai.0.22.19-build00125.min.js">
+      <publishTime>08/30/2016 20:26:52</publishTime>
+    </File>
+    <File Include="Scripts/amplify.js">
+      <publishTime>09/15/2016 09:15:51</publishTime>
+    </File>
+    <File Include="Scripts/amplify.min.js">
+      <publishTime>09/15/2016 09:15:50</publishTime>
+    </File>
+    <File Include="Scripts/angular-mocks.js">
+      <publishTime>01/09/2016 06:06:44</publishTime>
+    </File>
+    <File Include="Scripts/angular.js">
+      <publishTime>01/09/2016 06:06:44</publishTime>
+    </File>
+    <File Include="Scripts/angular.min.js">
+      <publishTime>01/09/2016 06:06:44</publishTime>
+    </File>
+    <File Include="Scripts/angular.min.js.map">
+      <publishTime>01/09/2016 06:06:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.js">
+      <publishTime>09/24/2016 15:51:17</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>09/24/2016 15:51:17</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Scripts/common/common.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/common/validate.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/config/require-config.js">
+      <publishTime>10/12/2016 15:04:35</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.af-ZA.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.af.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.am-ET.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.am.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-AE.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-BH.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-DZ.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-EG.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-IQ.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-JO.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-KW.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-LB.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-LY.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-MA.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-OM.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-QA.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-SA.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-SY.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-TN.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar-YE.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ar.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.arn-CL.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.arn.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.as-IN.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.as.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.az-Cyrl-AZ.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.az-Cyrl.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.az-Latn-AZ.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.az-Latn.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.az.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ba-RU.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ba.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.be-BY.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.be.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bg-BG.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bg.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bn-BD.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bn-IN.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bn.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bo-CN.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bo.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.br-FR.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.br.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bs-Cyrl-BA.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bs-Cyrl.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bs-Latn-BA.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bs-Latn.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.bs.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ca-ES.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ca.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.co-FR.js">
+      <publishTime>09/24/2016 15:37:01</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.co.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.cs-CZ.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.cs.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.cy-GB.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.cy.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.da-DK.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.da.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.de-AT.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.de-CH.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.de-DE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.de-LI.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.de-LU.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.de.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.dsb-DE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.dsb.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.dv-MV.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.dv.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.el-GR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.el.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-029.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-AU.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-BZ.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-CA.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-GB.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-IE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-IN.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-JM.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-MY.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-NZ.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-PH.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-SG.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-TT.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-US.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-ZA.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.en-ZW.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-AR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-BO.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-CL.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-CO.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-CR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-DO.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-EC.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-ES.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-GT.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-HN.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-MX.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-NI.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-PA.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-PE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-PR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-PY.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-SV.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-US.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-UY.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es-VE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.es.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.et-EE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.et.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.eu-ES.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.eu.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fa-IR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fa.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fi-FI.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fi.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fil-PH.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fil.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fo-FO.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fo.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr-BE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr-CA.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr-CH.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr-FR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr-LU.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr-MC.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fr.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fy-NL.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.fy.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ga-IE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ga.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gd-GB.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gd.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gl-ES.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gl.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gsw-FR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gsw.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gu-IN.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.gu.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ha-Latn-NG.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ha-Latn.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ha.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.he-IL.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.he.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hi-IN.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hi.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hr-BA.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hr-HR.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hr.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hsb-DE.js">
+      <publishTime>09/24/2016 15:37:02</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hsb.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hu-HU.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hu.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hy-AM.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.hy.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.id-ID.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.id.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ig-NG.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ig.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ii-CN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ii.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.is-IS.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.is.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.it-CH.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.it-IT.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.it.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.iu-Cans-CA.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.iu-Cans.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.iu-Latn-CA.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.iu-Latn.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.iu.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ja-JP.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ja.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ka-GE.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ka.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kk-KZ.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kk.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kl-GL.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kl.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.km-KH.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.km.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kn-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kn.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ko-KR.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ko.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kok-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.kok.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ky-KG.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ky.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lb-LU.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lb.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lo-LA.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lo.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lt-LT.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lt.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lv-LV.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.lv.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mi-NZ.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mi.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mk-MK.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mk.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ml-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ml.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mn-Cyrl.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mn-MN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mn-Mong-CN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mn-Mong.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mn.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.moh-CA.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.moh.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mr-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mr.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ms-BN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ms-MY.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ms.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mt-MT.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.mt.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nb-NO.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nb.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ne-NP.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ne.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nl-BE.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nl-NL.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nl.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nn-NO.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nn.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.no.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nso-ZA.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.nso.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.oc-FR.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.oc.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.or-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.or.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pa-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pa.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pl-PL.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pl.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.prs-AF.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.prs.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ps-AF.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ps.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pt-BR.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pt-PT.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.pt.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.qut-GT.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.qut.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.quz-BO.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.quz-EC.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.quz-PE.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.quz.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.rm-CH.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.rm.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ro-RO.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ro.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ru-RU.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ru.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.rw-RW.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.rw.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sa-IN.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sa.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sah-RU.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sah.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.se-FI.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.se-NO.js">
+      <publishTime>09/24/2016 15:37:03</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.se-SE.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.se.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.si-LK.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.si.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sk-SK.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sk.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sl-SI.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sl.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sma-NO.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sma-SE.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sma.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.smj-NO.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.smj-SE.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.smj.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.smn-FI.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.smn.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sms-FI.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sms.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sq-AL.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sq.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Cyrl-BA.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Cyrl-CS.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Cyrl-ME.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Cyrl-RS.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Cyrl.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Latn-BA.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Latn-CS.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Latn-ME.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Latn-RS.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr-Latn.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sr.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sv-FI.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sv-SE.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sv.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sw-KE.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.sw.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.syr-SY.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.syr.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ta-IN.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ta.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.te-IN.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.te.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tg-Cyrl-TJ.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tg-Cyrl.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tg.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.th-TH.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.th.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tk-TM.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tk.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tn-ZA.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tn.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tr-TR.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tr.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tt-RU.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tt.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tzm-Latn-DZ.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tzm-Latn.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.tzm.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ug-CN.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ug.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uk-UA.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uk.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ur-PK.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.ur.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uz-Cyrl-UZ.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uz-Cyrl.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uz-Latn-UZ.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uz-Latn.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.uz.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.vi-VN.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.vi.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.wo-SN.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.wo.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.xh-ZA.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.xh.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.yo-NG.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.yo.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-CHS.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-CHT.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-CN.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-Hans.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-Hant.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-HK.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-MO.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-SG.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh-TW.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zh.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zu-ZA.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.culture.zu.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/cultures/globalize.cultures.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/globalize.0.1.3/globalize.js">
+      <publishTime>09/24/2016 15:37:04</publishTime>
+    </File>
+    <File Include="Scripts/GPL-LICENSE.txt">
+      <publishTime>09/15/2016 09:15:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>08/30/2016 20:26:30</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.js">
+      <publishTime>09/22/2016 01:18:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.0.min.js">
+      <publishTime>09/22/2016 01:18:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.blockUI.js">
+      <publishTime>09/24/2016 15:50:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.cookie-1.4.1.min.js">
+      <publishTime>09/24/2016 15:50:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.cookie.js">
+      <publishTime>09/24/2016 15:50:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.pager.js">
+      <publishTime>09/24/2016 15:50:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>08/30/2016 20:26:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>08/30/2016 20:26:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>08/30/2016 20:26:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>08/30/2016 20:26:36</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.4.0.debug.js">
+      <publishTime>09/22/2016 00:48:14</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.4.0.js">
+      <publishTime>09/22/2016 00:48:14</publishTime>
+    </File>
+    <File Include="Scripts/knockout.mapping-latest.debug.js">
+      <publishTime>09/24/2016 14:54:44</publishTime>
+    </File>
+    <File Include="Scripts/knockout.mapping-latest.js">
+      <publishTime>09/24/2016 14:54:44</publishTime>
+    </File>
+    <File Include="Scripts/lodash.core.js">
+      <publishTime>09/24/2016 14:55:20</publishTime>
+    </File>
+    <File Include="Scripts/lodash.core.min.js">
+      <publishTime>09/24/2016 14:55:20</publishTime>
+    </File>
+    <File Include="Scripts/lodash.js">
+      <publishTime>09/24/2016 14:55:20</publishTime>
+    </File>
+    <File Include="Scripts/lodash.min.js">
+      <publishTime>09/24/2016 15:47:49</publishTime>
+    </File>
+    <File Include="Scripts/MIT-LICENSE.txt">
+      <publishTime>09/15/2016 09:15:48</publishTime>
+    </File>
+    <File Include="Scripts/models/department/deparment-model.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/models/document/document-model.js">
+      <publishTime>10/13/2016 22:35:45</publishTime>
+    </File>
+    <File Include="Scripts/models/documenttype/documenttype-model.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/models/global-index-model.js">
+      <publishTime>04/10/2016 19:53:43</publishTime>
+    </File>
+    <File Include="Scripts/models/organization/organization-model.js">
+      <publishTime>08/10/2016 15:09:04</publishTime>
+    </File>
+    <File Include="Scripts/models/rolesettings/rolesettings-model.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/models/user/user-model.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/30/2016 20:26:35</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>09/24/2016 14:54:09</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>09/24/2016 14:54:09</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>09/24/2016 14:54:09</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>09/24/2016 14:54:09</publishTime>
+    </File>
+    <File Include="Scripts/plugins/blueimp-md5/md5.js">
+      <publishTime>09/24/2016 17:19:33</publishTime>
+    </File>
+    <File Include="Scripts/plugins/blueimp-md5/md5.min.js">
+      <publishTime>09/24/2016 17:19:33</publishTime>
+    </File>
+    <File Include="Scripts/plugins/blueimp-md5/md5.min.js.map">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/dropzone/dropzone-amd-module.js">
+      <publishTime>06/10/2016 02:52:13</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/async.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/depend.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/font.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/goog.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/image.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/json.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/mdown.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/noext.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/requirejs-plugins/propertyParser.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/sweetalert/sweetalert-dev.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/sweetalert/sweetalert.min.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/emotion.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/hhEditor.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/proviewEditor.css">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/proviewEditor.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/wysiwyg-editor.css">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/wysiwyg-editor.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/plugins/wysiwyg/src/wysiwyg.js">
+      <publishTime>09/24/2016 17:19:34</publishTime>
+    </File>
+    <File Include="Scripts/r.js">
+      <publishTime>09/15/2016 09:17:11</publishTime>
+    </File>
+    <File Include="Scripts/README.txt">
+      <publishTime>09/15/2016 09:15:48</publishTime>
+    </File>
+    <File Include="Scripts/require.js">
+      <publishTime>09/15/2016 09:17:11</publishTime>
+    </File>
+    <File Include="Scripts/resources/admin/admin.js">
+      <publishTime>01/10/2016 12:08:17</publishTime>
+    </File>
+    <File Include="Scripts/resources/admin/admin.vi-VN.js">
+      <publishTime>01/10/2016 12:08:17</publishTime>
+    </File>
+    <File Include="Scripts/resources/common.js">
+      <publishTime>01/10/2016 12:08:17</publishTime>
+    </File>
+    <File Include="Scripts/resources/common.vi-VN.js">
+      <publishTime>01/10/2016 12:08:17</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>08/30/2016 20:26:35</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>08/30/2016 20:26:35</publishTime>
+    </File>
+    <File Include="Scripts/text.js">
+      <publishTime>09/24/2016 14:56:19</publishTime>
+    </File>
+    <File Include="Scripts/toastr.js">
+      <publishTime>09/24/2016 14:55:38</publishTime>
+    </File>
+    <File Include="Scripts/toastr.min.js">
+      <publishTime>09/24/2016 14:55:38</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/Departments/departments-viewmodel.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/Document/document-search-viewmodel.js">
+      <publishTime>10/12/2016 21:53:25</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/Document/document-viewmodel.js">
+      <publishTime>10/13/2016 23:31:55</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/DocumentType/documenttype-viewmodel.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/global-declare.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/global-index-viewmodel.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/global-navi.js">
+      <publishTime>03/10/2016 16:02:44</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/globalnavi.js">
+      <publishTime>05/10/2016 09:38:41</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/Members.js">
+      <publishTime>07/09/2016 01:31:14</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/Organization/organization-viewmodel.js">
+      <publishTime>08/10/2016 17:31:23</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/RolesSetting/rolesettings-viewmodel.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Scripts/viewmodels/User/user-viewmodel.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="tsconfig.json">
+      <publishTime>09/15/2016 10:49:12</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>07/09/2016 00:52:44</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Navigation/TopNavigation.cshtml">
+      <publishTime>10/12/2016 13:02:17</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>08/30/2016 20:26:37</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>08/30/2016 20:26:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_EmptyLayout.cshtml">
+      <publishTime>08/30/2016 22:14:30</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/28/2016 22:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>08/30/2016 20:26:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_SubMenu.cshtml">
+      <publishTime>09/13/2016 11:15:39</publishTime>
+    </File>
+    <File Include="Views/User/Index.cshtml">
+      <publishTime>08/30/2016 22:15:49</publishTime>
+    </File>
+    <File Include="Views/User/UserManagement.cshtml">
+      <publishTime>01/09/2016 06:19:17</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/30/2016 20:26:26</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/13/2016 23:34:58</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

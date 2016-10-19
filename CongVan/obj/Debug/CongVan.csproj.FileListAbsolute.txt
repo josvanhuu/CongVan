@@ -440,7 +440,6 @@ C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\System.Web.WebPages.R
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\WebGrease.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\Yahoo.Yui.Compressor.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\Autofac.dll
-C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\System.Web.Http.WebHost.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\Microsoft.Owin.Hosting.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\System.Web.Http.Owin.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\System.Net.Http.Formatting.dll
@@ -490,3 +489,4 @@ C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\obj\Debug\CongVan.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\obj\Debug\CongVan.pdb
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\Synvata.MsOfficeFileGenerator.dll
 C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\DocumentFormat.OpenXml.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\CongVan\bin\System.Net.Http.Formatting.xml

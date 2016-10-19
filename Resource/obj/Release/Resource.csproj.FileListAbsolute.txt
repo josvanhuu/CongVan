@@ -1,0 +1,13 @@
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\bin\Release\Resource.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\bin\Release\Resource.pdb
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\bin\Release\vi-VN\Resource.resources.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.AdminResources.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.CommonResources.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.Resources.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.AdminResources.vi-VN.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.CommonResources.vi-VN.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.Resources.vi-VN.resources
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.csproj.GenerateResource.Cache
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\vi-VN\Resource.resources.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.dll
+C:\ProjectPlus\HQsoft\CongVan\Code-Git\CongVan\Resource\obj\Release\Resource.pdb
